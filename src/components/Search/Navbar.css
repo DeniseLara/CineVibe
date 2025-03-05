@@ -1,0 +1,95 @@
+
+@media (min-width:340px){
+  .navbar-logo{
+    display: none;
+  }
+
+.navbar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 1000;
+    background-color: #1E1E1E;
+}
+
+.navbar-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-link{
+    color: #B0B0B0;
+    font-size: 1.5rem;
+    transition: all .3s ease; /* Transición suave */
+}
+
+
+.navbar-link:hover {
+  color: #fff; /* Cambia el color del texto */
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Añade una sombra suave */
+}
+
+.navbar-description{
+    display: none;
+}
+}
+
+ 
+/* Estilo para pantallas grandes (1024px o más) */
+@media (min-width: 1024px) {
+    .navbar {
+      position: fixed;
+      top: 0;
+      display: flex;
+      padding-left: 4rem;
+      justify-content: flex-start;
+      align-items: center;
+      left: 0;
+      width: 42vh; /* Ancho fijo para el navbar lateral */
+      height: 100vh; /* Altura completa de la pantalla */
+      background-color: #1E1E1E;
+      border-radius: 0; /* Quitamos el borde redondeado */
+      box-shadow: 4px 0 6px rgba(0, 0, 0, 0.4); /* Sombra para destacar el navbar */
+    }
+
+    .navbar-logo{
+      position: absolute;
+      top: 2rem;
+      display: initial;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #FFC107;
+    }
+  
+    .navbar-list {
+      margin-top: 2rem;
+      align-items: initial;
+      flex-direction: column; /* Cambiamos a diseño vertical */
+      gap: 4.5rem; /* Espaciado entre los íconos */
+    }
+  
+    .navbar-link {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      font-size: 1.2rem; /* Aumentamos el tamaño de los íconos */
+    }
+  
+    .navbar-link span {
+      font-size: 0.8rem; /* Texto debajo del ícono */
+      margin-top: 0.5rem;
+      color: #B0B0B0;
+    }
+  
+    .navbar-link:hover span {
+      color: #FFFFFF; /* Cambia el color del texto al pasar el cursor */
+    }
+
+    .navbar-description{
+        display: initial;
+        font-weight: 400;
+    }
+  }

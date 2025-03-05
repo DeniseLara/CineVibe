@@ -1,0 +1,80 @@
+.about-container {
+  color: #ffffff;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: calc(2rem + 3rem); /* 2rem del padding + 40px de margen extra */
+}
+
+.about-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-section {
+  margin-bottom: 3rem;
+}
+
+.about-subtitle {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* 🌟 Estilos de las Tarjetas de Tecnologías */
+
+
+.tech-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tech-description{
+  font-weight: 300;
+}
+
+.tech-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, rgba(0, 153, 255, 0.3), rgba(255, 69, 0, 0.3));
+}
+
+.tech-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* 🎨 Colores personalizados para los íconos */
+.react { color: #61dafb; }
+.css { color: #2965f1; }
+.api { color: #ffcc00; }
+.router { color: #f76c6c; }
+.js { color: #f7df1e; }
+
+@media (min-width: 340px){
+  .tech-cards {
+    display: grid;
+    grid-template-columns: 
+    repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta el número de columnas */
+    gap: 1.5rem;
+    justify-content: center; /* Asegura que las tarjetas estén centradas */
+  }
+}
+
+@media (min-width:1024px){
+  .about-container{
+      margin-left: 44vh;
+    }
+  
+}

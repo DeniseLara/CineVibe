@@ -1,0 +1,786 @@
+
+/* Estilos generales */
+
+
+.movie-details {
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
+/* Fondo desenfocado */
+.movie-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);  /* Aplica desenfoque */
+    z-index: -1; /* Envía la imagen al fondo */
+}
+
+/* Oscurece el fondo para mejor contraste */
+.movie-background::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Ajusta la opacidad */
+}
+
+/* Botón de volver */
+.back-arrow-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.back-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s;
+}
+
+.back-arrow:hover {
+    color: #FFFFFF;
+    transform: translateX(0.5rem);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Contenedor principal */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: calc(2rem + 3rem); /* 2rem del padding + 40px de margen extra */
+    /*max-width: calc(100% - 42vh); /* Ajusta el ancho para que ocupe el resto de la pantalla */
+}
+
+
+
+/* Sección de imagen */
+.movie-player {
+    position: relative;
+    width: 80%;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.movie-save{
+    position: absolute;
+    right: 1rem;
+    top: 0;
+}
+
+
+
+.movie-save {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: transform 0.2s ease;
+}
+
+.movie-save:hover {
+    transform: scale(1.1);
+}
+
+.save-icon {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+/* Cambia de color si la película está guardada */
+.save-icon.saved {
+    color: #ffcc00; /* Amarillo */
+}
+
+
+/*.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}*/
+
+/*.modal-content {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    width: 80%;
+    background: #0f0f0f;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;    
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}*/
+
+/*.modal-video-container {
+    max-width: 100%;
+    width: 85%;
+    height: auto;
+   
+}*/
+
+/*.close-modal {
+    color: #ffffff;
+    position: absolute;
+    top: -0.8rem;
+    font-size: 2rem;
+    right: -1.8rem;
+    transition: all .3s ease;
+    background-color: transparent;
+  
+}*/
+
+/*iframe{
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}*/
+
+
+
+/*.close-modal:hover {
+    color: #ccc;
+}
+
+.close-modal:focus {
+    outline: none;
+}*/
+
+
+
+.movie-poster-details {
+    width: 100%;
+    opacity: 0.6;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+
+/* Información de la película */
+.movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.movie-save{
+    font-size: 1.8rem;
+}
+
+.movie-text {
+    text-align: center;
+    position: relative;
+}
+
+.movie-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: bold;
+    color: #fff;
+}
+
+.movie-rating {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.movie-overview {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    color: #ccc;
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+/* Botón Watch Now */
+.movie-button {
+    display: inline-flex;
+    background: linear-gradient(135deg, #ff3d00, #ff7300);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.8rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    gap: 0.5rem;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(255, 61, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.movie-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-button:focus{
+    outline: none;
+}
+
+.movie-button:hover {
+    background: linear-gradient(135deg, #ff7300, #ff3d00);
+    box-shadow: 0px 6px 15px rgba(255, 61, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+.movie-button:active {
+    transform: scale(0.95);
+}
+
+/* Actores */
+.movie-actors {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    color: #fff;
+}
+
+.movie-actors-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.movie-actors-list .movie-actor {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 0.8rem;
+    transition: all .3s ease;
+}
+
+.movie-actor:hover{
+    opacity: 0.5;
+}
+
+
+/* Estilos para el fondo del modal */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Cuando el modal está activo */
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Contenedor del modal */
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 50rem;
+    background: #1c1c1e;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Cuando el modal está activo */
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Botón de cerrar */
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-modal:focus{
+    outline: none;
+}
+
+.close-modal:hover {
+    color: #ff3d00;
+    transform: rotate(90deg);
+}
+
+/* Contenedor del video */
+.modal-video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(241, 234, 232, 0.3);
+}
+
+.modal-video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: inherit;
+}
+
+/* Responsividad */
+@media (min-width: 768px) {
+    .modal-content {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .modal-content {
+        width: 50%;
+    }
+}
+
+
+
+
+@media (min-width:450px){
+/*.modal-content {
+    position: relative;
+    max-width: 100%;
+    height: 60vh;
+    width: 80%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}*/
+
+/*.modal-video-container {
+    max-width: 100%;
+    width: 85%;
+    height: 85vh;
+   
+}*/
+}
+
+/* Responsividad */
+@media (min-width: 768px) {
+
+/*.modal-content {
+    position: relative;
+    max-width: 100%;
+    height: 80vh;
+    width: 80%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}*/
+
+/*.modal-video-container {
+    max-width: 100%;
+    width: 80%;
+    height: 80vh;
+   
+}*/
+    .wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .movie-player {
+        max-width: 50%;
+    }
+
+    .movie-text {
+        text-align: left;
+    }
+
+    .movie-actors-list {
+        justify-content: flex-start;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    /* Fondo desenfocado */
+.movie-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);  /* Aplica desenfoque */
+    z-index: -1; /* Envía la imagen al fondo */
+}
+
+/* Oscurece el fondo para mejor contraste */
+.movie-background::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Ajusta la opacidad */
+}
+
+
+/*.modal-content {
+    position: relative;
+    max-width: 100%;
+    height: 80vh;
+    width: 70%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}*/
+
+/*.modal-video-container {
+    max-width: 100%;
+    width: 80%;
+    height: 80vh;
+   
+}*/
+
+    .movie {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+    }
+    
+    .movie-details {
+        max-width: 100%;
+        margin-left: 42vh; /* Asegura que el contenido respete el espacio del navbar */
+        padding: 2rem 1rem;
+    }
+
+    .wrapper {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0; /* 2rem del padding + 40px de margen extra */
+    }
+
+    .movie-player {
+        max-width: 40%;
+    }
+
+  
+
+    .movie-text {
+        text-align: left;
+    }
+
+    .movie-actors-list {
+        justify-content: flex-start;
+    }
+
+    
+    .movie-actors-list li {
+        font-size: clamp(1rem, 2vw, 1.1rem);
+    }
+
+    .movie-overview {
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+    }
+}
+
+/*.movie-details {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    padding: 1rem;
+    top: 0;
+    position: absolute;
+}
+
+.movie-player {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+}
+
+.movie-poster-details {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    filter: brightness(0.6);
+    transition: filter 0.5s ease;
+}
+
+.movie-player:hover .movie-poster-details {
+    filter: brightness(0.8);
+}
+
+.movie-poster-details-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.back-arrow-link {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 10;
+}
+
+.back-arrow {
+    font-size: 2rem;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.back-arrow:hover {
+    transform: translateX(-5px);
+    color: #ff3d00;
+}
+
+.movie {
+    background-color: rgba(20, 20, 20, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.1);
+    margin-top: -100px;
+    position: relative;
+    z-index: 2;
+}
+
+.movie-text{
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff3d00;
+}
+
+.movie-rating {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffcc00;
+}
+
+.movie-overview {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.movie-button {
+    display: inline-block;
+    border: 2px solid #ff3d00;
+    color: #ffffff;
+    max-width: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    border-radius: 12rem;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.movie-button:hover {
+    color: #FFFFFF;
+    background: linear-gradient(130deg, #ff7300, #ff3d00);
+    box-shadow: 0px 6px 16px rgba(255, 61, 0, 0.5);
+    transform: scale(1.02);
+}
+
+.movie-button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(255, 61, 0, 0.2);
+}
+
+
+
+.movie-actors {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    display: inline-block;
+}
+
+.movie-actors-list {
+    list-style: none;
+    display: flex;
+    padding-bottom: 2.5rem;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.movie-actors-list li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.movie-actors-list li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    
+
+    .movie {
+        padding: 1.5rem;
+    }
+    .movie-title {
+        font-size: 1.8rem;
+    }
+    .movie-actors-list {
+        flex-direction: column;
+    }
+}
+
+@media (min-width:1024px){
+    .movie-details{
+        position: relative;
+      }
+    
+    
+      .movie-player {
+        max-width: 100%;
+        height: auto;
+        max-height: 100%; 
+    }
+
+    .movie-poster-details {
+        height: auto;
+        max-width: 100%;
+        max-height: 100%; 
+        object-fit: contain; 
+        border-radius: 1rem;
+    }
+
+    .movie-poster-details-gradient {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-radius: 1rem;
+        width: 100%;
+        height: auto;
+        background: none;
+    }
+
+    .movie-actors-list {
+        padding-bottom: 0;
+      
+    }
+    
+    .wrapper{
+        display: flex;
+        position: initial;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .movie {
+        max-width: 50%;
+        background-color: rgba(20, 20, 20, 0.9);
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.1);
+        margin-top: 0;
+        position: initial;
+        z-index:initial;
+    }
+    
+    .back-arrow-link {
+        position: absolute;
+        top: 0;
+        left:1rem;
+        z-index: 1000;
+    }
+    
+    .movie-button{
+        max-width: 60%;
+
+    }
+
+
+}*/
+
+

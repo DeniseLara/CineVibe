@@ -1,0 +1,160 @@
+.home-container{
+  padding-bottom: calc(2rem + 3rem); /* 2rem del padding + 40px de margen extra */
+
+}
+
+@media (min-width:340px){
+      .home-container{
+        padding-left: 2%;
+        padding-right: 2%;
+      }
+      
+      .home-title {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+      
+      .category {
+        margin-bottom: 1rem;
+      }
+      
+      .category-title {
+        color: #A0A0A0;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      
+      /* 🔥 Scroll horizontal sin flechas 🔥 */
+      .movie-slider {
+        display: flex;
+        overflow-x: auto;  /* Habilita el scroll horizontal */
+        scrollbar-width: none;  /* Oculta la barra de scroll en Firefox */
+        -ms-overflow-style: none;  /* Oculta la barra en Edge */
+        gap: 1rem;
+        padding-bottom: 1rem;
+      }
+
+     
+      
+      /* Oculta la barra de scroll en Chrome y Safari */
+      .movie-slider::-webkit-scrollbar {
+        display: none;
+      }
+      
+      .movie-slide {
+        flex: 0 0 auto;
+        max-width: 45%;
+        width: 100%;
+        aspect-ratio: 2 / 3;
+        position: relative;
+        cursor: pointer; 
+    }
+
+
+      
+      .movie-poster {
+        width: 100%;
+        aspect-ratio: 2 / 3;
+        object-fit:cover;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+      }
+      
+      /*efecto de hover*/
+      .movie-slide:hover .movie-poster{
+        transform: scale(1.05);
+        opacity: 0.4;
+      }
+
+      /* Mostrar el overlay al hacer hover */
+       .movie-slide:hover::before {
+        opacity: 1; /* Hace visible el fondo semi-transparente */
+       }
+
+       .movie-slide .play-button {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #E50914; /* Color rojo de Netflix */
+        color: #FFFFFF;
+        font-size: 0.69rem;
+        font-weight: 500;
+        padding: 0.5rem 0.8rem;
+        border: none;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        opacity: 0; /* Inicialmente oculto */
+        transition: all 0.3s ease; /* Transición suave */
+        z-index: 2; /* Asegura que esté sobre el overlay */
+      }
+
+      .play-button:hover{
+        background-color: #bc0d12;
+        color: #CCCCCC;
+      }
+
+      /* Mostrar el botón al hacer hover */
+      .movie-slide:hover .play-button {
+       opacity: 1; /* Hace visible el botón */
+       }
+
+      .category-title{
+        font-size: 1rem;
+        font-weight: 500;
+      }
+}
+
+@media (min-width:450px){
+
+  .movie-slide {
+    max-width: 30%;
+}
+
+.movie-slide .play-button {
+  font-size: 0.61rem;
+}
+
+}
+
+@media (min-width:500px){
+  .movie-slide .play-button {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width:768px){
+  .movie-slide {
+    max-width: 24%;
+}
+
+.movie-slide .play-button {
+  font-size: 0.9rem;
+}
+}
+
+@media (min-width:1024px){
+  .home-container{
+    margin-left: 44vh;
+  }
+
+  .home-title{
+    font-size: 1.5rem;
+  }
+
+  .movie-slide {
+    max-width: 25%;
+}
+
+.movie-slide .play-button {
+  font-size: 0.9rem;
+}
+}
+
+@media (min-width:1150px){
+  .movie-slide {
+    max-width: 20%;
+}
+}

@@ -1,0 +1,100 @@
+body{
+    background-color: #121212;
+}
+
+
+/*.search-container{
+    padding-bottom: calc(2rem + 3rem);
+  
+}*/
+
+.movies-container{
+  padding-bottom: calc(2rem + 3rem); /* 2rem del padding + 40px de margen extra */
+}
+
+.search-page{
+  padding-bottom: calc(2rem + 3rem); /* 2rem del padding + 40px de margen extra */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5rem; /* Agrega algo de padding a los lados */
+
+}
+
+.movies-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el número de columnas */
+  gap: 1.5rem;
+  justify-items: center; /* Asegura que las tarjetas estén centradas */
+  max-width: 100%;
+}
+
+/* Mensaje de búsqueda */
+.loading-message {
+  color: #ffab00;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Mensaje cuando no se ha realizado ninguna búsqueda aún */
+.no-search-yet {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.no-search-message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.instructions {
+  font-size: 1rem;
+  color: #bbb;
+  margin-top: 1rem;
+}
+
+
+@media (min-width:340px){
+  .search-container{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+@media (min-width:1024px){
+  .search-page{
+    margin-left: 44vh;
+  }
+
+  .no-search-yet {
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .no-search-message {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .instructions {
+    font-size: 1.4rem;
+    color: #bbb;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:1280px){
+  .movies-container {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta el número de columnas */
+    gap: 1.5rem;
+    justify-items: center; /* Asegura que las tarjetas estén centradas */
+    max-width: 100%;
+  }
+}
