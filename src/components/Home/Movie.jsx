@@ -83,10 +83,13 @@ const toggleFavorite = () => {
     
      <div className="movie">
       <div className="movie-text">
+
+        <div className="movie-principal">
       <h2 className="movie-title">{movie.title}</h2>
 
       <div className='movie-save' onClick={toggleFavorite}>
-        < CiSaveDown2 className={`save-icon ${isFavorite ? 'saved' : ''}`} />
+        < CiSaveDown2  className={`save-icon ${isFavorite ? 'saved' : ''}`} />
+        </div>
         </div>
 
       <p className="movie-rating">Calificación: {movie.vote_average}</p>

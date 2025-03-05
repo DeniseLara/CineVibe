@@ -22,6 +22,8 @@
     gap: 2rem;
     width: 100%;
     max-width: 100%;
+    padding-bottom: calc(2rem + 3rem); /* 2rem del padding + 40px de margen extra */
+
 }
 
 .favorite-item {
