@@ -9,6 +9,8 @@ body{
 }*/
 
 .movies-container{
+  display: grid;
+  
   padding-bottom: calc(2rem + 3rem); /* 2rem del padding + 40px de margen extra */
 }
 

@@ -9,6 +9,7 @@ function MovieCard({ movie }) {
         : "https://via.placeholder.com/500x750?text=No+Image"; // Imagen por defecto si no hay poster
 
     return (
+        <div className="movie-card-container">
         <Link  to={`/movie/${movie.id}`} className="movie-card">
             <img src={imageUrl} alt={movie.title} className="movie-image" />
             <div className="movie-info">
@@ -17,6 +18,7 @@ function MovieCard({ movie }) {
                 <p className="movies-rating"><div><MdStarRate/></div>{movie.vote_average?.toFixed(1) || "N/A"}</p>
             </div>
         </Link>
+        </div>
     );
 }
 

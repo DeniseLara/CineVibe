@@ -35,7 +35,7 @@ function FavoritePage() {
                                 className="favorite-image"
                             />
                             <div className="favorite-info">
-                                <h3>{movie.title}</h3>
+                                {/*<h3>{movie.title}</h3>*/}
                                 <button
                                     className="remove-favorite"
                                     onClick={() => removeFavorite(movie.id)}
