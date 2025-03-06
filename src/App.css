@@ -1,5 +1,72 @@
-.path{
-  margin-top: 1.5rem;
+
+
+/* Modo Claro */
+.light {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+.light .navbar{
+  background-color: #F0F0F0;
+}
+
+.light .search-input{
+  color: #333333; /* Color gris oscuro para texto */
+}
+
+.light .navbar-link.active{
+  color: #FFC107; /* Color dorado brillante al hacer hover */
+}
+
+.light  .search-input::placeholder {
+  color: #333333;
+}
+
+.light .movie-background{
+  filter: blur(4px);  /* Aplica desenfoque */
+
+}
+
+.light .movie-card:hover .movie-image {
+  opacity: 0.8;
+}
+
+.light .movie-slide:hover .movie-poster{
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.light .navbar-link{
+  color: #333333; /* Color gris oscuro para texto */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  transition: all .3s ease; /* Transición suave */
+}
+
+.light .logo{
+  color: #333333;
+}
+
+.light .movie-poster{
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra elegante pero notable */
+}
+
+.light .movie-poster:hover{
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1), 0 20px 30px rgba(0, 0, 0, 0.05); /* Sombra más intensa al hover */
+}
+
+.light .navbar-logo{
+  color: #333333;
+}
+
+.light .navbar-link:hover {
+  color: #FFC107; /* Color dorado brillante al hacer hover */
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada en hover */
+}
+
+/* Modo Oscuro */
+.dark {
+  background-color: #121212;
+  color: #ffffff;
 }
 
 @media (min-width:340px){
@@ -80,7 +147,15 @@ input:checked + .slider:before {
 
 @media (min-width:1024px){
  
+ .logo{
+  display: none;
+ }
 
+ .mode-toggle{
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+ }
 
 }
 

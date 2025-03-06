@@ -55,7 +55,7 @@ const toggleFavorite = () => {
   }
 
   return (
-    <div className="movie-details container">
+    <div className="movie-details">
 
        <Link to="/" className="back-arrow-link">
       <div className="back-arrow">

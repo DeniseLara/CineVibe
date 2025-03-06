@@ -13,16 +13,24 @@ import Movie from './components/Home/Movie';
 import { useLocation } from 'react-router-dom';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
   const location = useLocation(); // Detectar la ruta actual
 
-  // Cambiar el estado de darkMode
+  // Recuperar el estado del modo oscuro desde localStorage
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('darkMode') === 'true'? true : true;; // Si no existe, por defecto será false
+  });
+
+ // Cambiar el estado de darkMode y guardarlo en localStorage
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    localStorage.setItem('darkMode', newMode); // Guardamos en localStorage
   };
 
    // Usamos un efecto para agregar o quitar clases dependiendo del estado de darkMode
    useEffect(() => {
+    console.log("Modo oscuro:", darkMode); // Debugging
+
     if (darkMode) {
       document.body.classList.add('dark');
       document.body.classList.remove('light');

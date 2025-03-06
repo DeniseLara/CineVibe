@@ -1,6 +1,6 @@
 .home-container{
   padding-bottom: calc(2rem + 3rem); /* 2rem del padding + 40px de margen extra */
-
+  margin-top: 1.5rem;
 }
 
 @media (min-width:340px){
@@ -54,13 +54,15 @@
 
       
       .movie-poster {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(0, 0, 0, 0.2); /* Sombra profunda y difusa */
         width: 100%;
         aspect-ratio: 2 / 3;
         object-fit:cover;
         border-radius: 0.5rem;
         transition: all 0.3s ease;
       }
-      
+
+     
       /*efecto de hover*/
       .movie-slide:hover .movie-poster{
         transform: scale(1.05);

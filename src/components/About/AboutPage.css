@@ -1,6 +1,7 @@
 .about-container {
-  color: #ffffff;
+  /*color: #ffffff;*/
   padding-left: 1rem;
+  margin-top: 1.5rem;
   padding-right: 1rem;
   padding-bottom: calc(2rem + 3rem); /* 2rem del padding + 40px de margen extra */
 }

@@ -23,13 +23,16 @@
 .navbar-link{
     color: #B0B0B0;
     font-size: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
     transition: all .3s ease; /* Transición suave */
 }
 
+.navbar-link.active{
+  color: #fff; /* Cambia el color del texto */
+}
 
 .navbar-link:hover {
   color: #fff; /* Cambia el color del texto */
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Añade una sombra suave */
 }
 
 .navbar-description{
@@ -50,9 +53,9 @@
       left: 0;
       width: 42vh; /* Ancho fijo para el navbar lateral */
       height: 100vh; /* Altura completa de la pantalla */
-      background-color: #1E1E1E;
+      /*background-color: #1E1E1E;*/
       border-radius: 0; /* Quitamos el borde redondeado */
-      box-shadow: 4px 0 6px rgba(0, 0, 0, 0.4); /* Sombra para destacar el navbar */
+      box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2); /* Sombra suave desde la derecha */
     }
 
     .navbar-logo{
