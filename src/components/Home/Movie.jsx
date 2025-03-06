@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import { CiSaveDown2 } from "react-icons/ci";
 import { FaPlay } from "react-icons/fa6";
 import { IoCloseOutline } from "react-icons/io5";
+import ReactPlayer from 'react-player';
 
 
 function Movie() {
@@ -123,15 +124,12 @@ const toggleFavorite = () => {
                           <div className="modal-icon"><IoCloseOutline/></div>
                           </button>
                           <div className="modal-video-container">
-                        <iframe
+                        <ReactPlayer
                             width="100%"
                             height="100%"
-                            src={`https://www.youtube.com/embed/${videoKey}`}
-                            title="Movie Trailer"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
+                            url={`https://www.youtube.com/watch?v=${videoKey}`}
+                            controls
+                        ></ReactPlayer>
                         </div>
                     </div>
                 </div>

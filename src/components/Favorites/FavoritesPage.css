@@ -118,18 +118,16 @@
 }
 
 @media (min-width: 768px) {
-    
-    .favorite-title {
-        font-size: 3rem;
-    }
 
     .favorites-list {
         grid-template-columns: repeat(3, 1fr);
     }
+    
 }
 
 @media (min-width: 1024px) {
     .favorites-list {
+        padding: 1rem 0rem;
         grid-template-columns: repeat(4, 1fr); /* Añadimos más columnas en pantallas grandes */
     }
 
