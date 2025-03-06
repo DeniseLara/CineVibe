@@ -54,7 +54,7 @@ function App() {
 
       <div className='path'>
     <Routes>
-     <Route className="route" path='/' element={<HomePage/>}/>
+     <Route  path='/' element={<HomePage/>}/>
 
       <Route  path='/search' element={<SearchPage/>}/>
 
@@ -62,7 +62,7 @@ function App() {
 
       <Route  path='/about' element={<AboutPage/>}/>
 
-     <Route className="play" path='/movie/:movieId' element={<Movie/>}/>
+     <Route  path='/movie/:movieId' element={<Movie/>}/>
 
     </Routes>
     </div>
