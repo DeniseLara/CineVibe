@@ -29,7 +29,6 @@ function App() {
 
    // Usamos un efecto para agregar o quitar clases dependiendo del estado de darkMode
    useEffect(() => {
-    console.log("Modo oscuro:", darkMode); // Debugging
 
     if (darkMode) {
       document.body.classList.add('dark');
