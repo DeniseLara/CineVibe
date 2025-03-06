@@ -61,8 +61,7 @@
     text-align: center;
     border-radius: 0 0 12px 12px;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 0;
     right: 0;
 }
 
@@ -75,17 +74,39 @@
 }
 
 .remove-favorite {
-    background-color: #f92a2a;
-    color: #fff;
-    border: none;
+    background-color: transparent;
+    color: #ffffff; /* Rojo brillante */
+    border: 2px solid #ffffff; /* Borde rojo */
     padding: 0.5rem 1rem;
-    border-radius: 8px;
+    border-radius: 50px; /* Esquinas redondeadas */
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .remove-favorite:hover {
-    background-color: #e73e3e;
+    background-color: #f92a2a;
+    color: #fff; /* Blanco cuando se hace hover */
+    border: 2px solid transparent; /* El borde se hace invisible al hacer hover */
+    transform: translateY(-3px); /* Le da un pequeño efecto de "flotado" */
+}
+
+.remove-favorite:focus {
+    outline: none; /* Elimina el contorno por defecto */
+    box-shadow: 0 0 0 3px rgba(249, 42, 42, 0.5); /* Efecto de enfoque suave */
+}
+
+.remove-favorite svg {
+    font-size: 1.2rem; /* Icono más grande */
+    transition: transform 0.2s ease;
+}
+
+.remove-favorite:hover svg {
+    transform: rotate(90deg); /* Rota el icono cuando se hace hover */
 }
 
 .empty-message {

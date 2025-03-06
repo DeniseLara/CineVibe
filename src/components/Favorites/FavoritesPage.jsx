@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './FavoritesPage.css';
+import { FaTrashAlt } from "react-icons/fa";
 
 function FavoritePage() {
     // Estado para los favoritos
@@ -40,7 +41,7 @@ function FavoritePage() {
                                     className="remove-favorite"
                                     onClick={() => removeFavorite(movie.id)}
                                 >
-                                    Remove
+                                    <FaTrashAlt/>
                                 </button>
                             </div>
                         </div>
