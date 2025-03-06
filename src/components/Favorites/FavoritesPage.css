@@ -1,15 +1,15 @@
 .favorites-container {
     background-color: #121212;
     color: #ffffff;
-    padding: 2rem;
     padding-bottom: 3rem;
-   
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .favorite-title {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
@@ -20,6 +20,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Asegura que haya 2 o más columnas */
     gap: 2rem;
+    padding: 1rem 2rem;
     width: 100%;
     max-width: 100%;
     padding-bottom: calc(2rem + 3rem); /* 2rem del padding + 40px de margen extra */

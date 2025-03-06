@@ -22,7 +22,7 @@ function AboutPage() {
       </section>
 
       <section className="about-section">
-        <h2 className="about-subtitle">Tecnologías Utilizadas</h2>
+        <h2 className="about-subtitle tech">Tecnologías Utilizadas</h2>
         <div className="tech-cards">
           <div className="tech-card">
             <FaReact className="tech-icon react" />

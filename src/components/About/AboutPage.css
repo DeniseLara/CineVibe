@@ -1,7 +1,7 @@
 .about-container {
   color: #ffffff;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-bottom: calc(2rem + 3rem); /* 2rem del padding + 40px de margen extra */
 }
 
@@ -65,10 +65,15 @@
 @media (min-width: 340px){
   .tech-cards {
     display: grid;
+    padding: 1rem 2rem;
     grid-template-columns: 
     repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta el número de columnas */
     gap: 1.5rem;
     justify-content: center; /* Asegura que las tarjetas estén centradas */
+  }
+
+  .about-subtitle.tech{
+    text-align: center;
   }
 }
 
