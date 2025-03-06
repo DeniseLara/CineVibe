@@ -1,9 +1,16 @@
 services:
-  - type: web
-    name: cinevibe
+  - type: static
+    name: CineVibe
     env: static
     buildCommand: npm run build
-    startCommand: serve -s build
-    routes:
-      - src: /(.*)
-        dest: /dist/index.html
+    publishDir: dist
+    staticPublishPath: dist
+    headers:
+      - source: /*
+        headers:
+          - key: Cache-Control
+            value: no-cache
+    redirects:
+      - source: /*
+        destination: /index.html
+        status: 200
