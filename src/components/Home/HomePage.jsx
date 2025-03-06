@@ -9,6 +9,7 @@ import {
 import './HomePage.css';
 import { ThreeDots } from 'react-loader-spinner';
 import { Link } from 'react-router-dom';
+//import Skeleton from "react-loading-skeleton";
 
 function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -51,6 +52,12 @@ function HomePage() {
     { title: 'Series', id: 'series' },
     { title: 'Románticas', id: 'romance' },
   ];
+
+  useEffect(() => {
+    // Simulación de carga (puedes reemplazarlo con tu lógica de carga real)
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="home-container">

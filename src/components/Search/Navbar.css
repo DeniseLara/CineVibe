@@ -21,7 +21,7 @@
 }
 
 .navbar-link{
-    color: #B0B0B0;
+    color:  #808080;
     font-size: 1.5rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
     transition: all .3s ease; /* Transición suave */
