@@ -118,10 +118,7 @@
 }
 
 @media (min-width: 768px) {
-    .favorites-container {
-        padding: 3rem;
-    }
-
+    
     .favorite-title {
         font-size: 3rem;
     }
