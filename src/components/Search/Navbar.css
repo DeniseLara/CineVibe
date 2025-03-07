@@ -29,6 +29,7 @@
     transition: all .3s ease; /* Transición suave */
 }
 
+.navbar-link:focus-visible,
 .navbar-link:focus,
 .navbar-link:hover {
   outline: none;
