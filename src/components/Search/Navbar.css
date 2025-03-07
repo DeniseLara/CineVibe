@@ -27,9 +27,10 @@
     transition: all .3s ease; /* Transición suave */
 }
 
-.navbar-link:focus{
+.navbar-icon:focus,
+.navbar-icon:hover {
   outline: none;
-  background: none;
+  background-color: none;
 }
 
 .navbar-link.active{

@@ -24,7 +24,8 @@ function Navbar(){
             to="/" 
             className={`navbar-link ${isActive('/') ? 'active' : ''}`}
             > 
-            <IoHomeSharp /> <p className="navbar-description">Home</p>
+            <div className="navbar-icon"><IoHomeSharp /> </div>
+            <p className="navbar-description">Home</p>
             </Link>
             </li>
 
@@ -33,7 +34,8 @@ function Navbar(){
                 to="/search" 
                 className={`navbar-link ${isActive('/search') ? 'active' : ''}`} // Aplica clase active si está activo
                 >
-                <IoSearchSharp /> <p className="navbar-description">Search</p>
+                <div className="navbar-icon"><IoSearchSharp /></div> 
+                <p className="navbar-description">Search</p>
                 </Link>
             </li>
 
@@ -42,7 +44,8 @@ function Navbar(){
                 to="/favorites" 
                 className={`navbar-link ${isActive('/favorites') ? 'active' : ''}`} // Aplica clase active si está activo
                 >
-                <MdFavorite /> <p className="navbar-description">Favorites</p>
+                <div className="navbar-icon"><MdFavorite /> </div>
+                <p className="navbar-description">Favorites</p>
                 </Link>
             </li>
 
@@ -51,7 +54,8 @@ function Navbar(){
                 to="/about" 
                 className={`navbar-link ${isActive('/about') ? 'active' : ''}`} // Aplica clase active si está activo
                 >
-                <BiInfoCircle/> <p className="navbar-description">About</p>
+                <div className="navbar-icon"><BiInfoCircle/> </div>
+                <p className="navbar-description">About</p>
                 </Link>
             </li>
 
