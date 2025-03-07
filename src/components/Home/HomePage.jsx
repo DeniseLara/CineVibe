@@ -45,11 +45,11 @@ function HomePage() {
   }, []);
 
   const categories = [
-    { title: 'Tendencias', id: 'trending' },
+    { title: 'Trending', id: 'trending' },
     { title: 'Popular', id: 'popular' },
-    { title: 'Comedias', id: 'comedy' },
+    { title: 'Comedy', id: 'comedy' },
     { title: 'Series', id: 'series' },
-    { title: 'Románticas', id: 'romance' },
+    { title: 'Romance', id: 'romance' },
   ];
 
   {/*useEffect(() => {
@@ -61,7 +61,7 @@ function HomePage() {
   return (
     <div className="home-container">
       
-      <h1 className="home-title">Descubre, guarda y disfruta de tus películas favoritas</h1>
+      <h1 className="home-title">Discover, save, and enjoy your favorite movies</h1>
       {categories.map((category) => (
         <div key={category.id} className="category">
           <p className="category-title">{category.title}</p>
@@ -74,7 +74,7 @@ function HomePage() {
                   className="movie-poster"
                 />
                 {/* Botón "Ver ahora" */}
-                <Link to={`/movie/${movie.id}`} className="play-button">Ver detalles</Link>
+                <Link to={`/movie/${movie.id}`} className="play-button">View Details</Link>
               </div>
             ))}
           </div>

@@ -51,7 +51,7 @@ const toggleFavorite = () => {
 
 
   if (!movie) {
-    return <div>Cargando...</div>;
+    return <div>Loading...</div>;
   }
 
   return (
@@ -93,7 +93,7 @@ const toggleFavorite = () => {
         </div>
         </div>
 
-      <p className="movie-rating">Calificación: {movie.vote_average}</p>
+      <p className="movie-rating">Rating: {movie.vote_average}</p>
       <p className="movie-overview">{movie.overview}</p>
 
       {videoKey && (
@@ -105,7 +105,7 @@ const toggleFavorite = () => {
                             </button>
                         )}
 
-      <h3 className="movie-actors">Actores Principales</h3>
+      <h3 className="movie-actors">Main Actors</h3>
       <ul className="movie-actors-list">
         {actors.map((actor) => (
           <li className='movie-actor' key={actor.id}>

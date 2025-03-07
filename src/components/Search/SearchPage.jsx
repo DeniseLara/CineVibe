@@ -28,7 +28,7 @@ function SearchPage() {
 
             <div className="movies-container">
                 {isSearching ? (
-                    <p className="loading-message">Buscando...</p> // Mensaje de búsqueda
+                    <p className="loading-message">Searching...</p> // Mensaje de búsqueda
                 ) : searchResults.length > 0 ? (
                     searchResults.map((movie) => (
                         <MovieCard key={movie.id} movie={movie} />
@@ -36,10 +36,10 @@ function SearchPage() {
                 ) : (
                     <div className="no-search-yet">
                         <p className="no-search-message">
-                            ¡Busca tus películas favoritas!
+                            ¡Search for your favorite movies!                      
                         </p>
                         <p className="instructions">
-                            Ingresa el nombre de una película en la barra de búsqueda para comenzar.
+                        Enter a movie name in the search bar to get started.
                         </p>
                     </div>
                 )}
