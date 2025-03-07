@@ -27,6 +27,11 @@
     transition: all .3s ease; /* Transición suave */
 }
 
+.navbar-link:focus{
+  outline: none;
+  background: none;
+}
+
 .navbar-link.active{
   color: #fff; /* Cambia el color del texto */
 }
