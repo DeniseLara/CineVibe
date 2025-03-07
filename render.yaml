@@ -1,10 +1,9 @@
 services:
-  - type: static
+  - type: static-site
     name: CineVibe
     env: static
     buildCommand: npm run build
     publishDir: dist
-    staticPublishPath: dist
     headers:
       - source: /*
         headers:
