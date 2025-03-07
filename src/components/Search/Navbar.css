@@ -32,7 +32,7 @@
 .navbar-link:focus,
 .navbar-link:hover {
   outline: none;
-  background-color: none;
+  background-color: transparent;
 }
 
 .navbar-icon {
@@ -45,7 +45,7 @@
 
 .navbar-link:active{
   outline: none;
-  background: none;
+  background: transparent;
 }
 
 .navbar-link:hover {
