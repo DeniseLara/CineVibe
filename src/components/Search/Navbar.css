@@ -2,6 +2,7 @@
 @media (min-width:340px){
   .navbar-logo{
     display: none;
+    transition: color .4s ease-in-out;
   }
 
 .navbar{
@@ -27,14 +28,19 @@
     transition: all .3s ease; /* Transición suave */
 }
 
-.navbar-icon:focus,
-.navbar-icon:hover {
+.navbar-link:focus,
+.navbar-link:hover {
   outline: none;
   background-color: none;
 }
 
 .navbar-link.active{
   color: #fff; /* Cambia el color del texto */
+}
+
+.navbar-link:active{
+  outline: none;
+  background: none;
 }
 
 .navbar-link:hover {
