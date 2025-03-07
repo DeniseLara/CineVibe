@@ -36,7 +36,11 @@
   background-color: transparent;
 }
 
-.navbar-icon {
+.navbar-icon:focus-visible,
+.navbar-icon:focus,
+.navbar-icon:hover {
+  outline: none;
+  background-color: transparent;
   user-select: none;   /* Evita que el icono sea seleccionado */
 }
 
