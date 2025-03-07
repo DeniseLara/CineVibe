@@ -24,6 +24,7 @@
 .navbar-link{
     color:  #808080;
     font-size: 1.5rem;
+    text-decoration: none;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
     transition: all .3s ease; /* Transición suave */
 }
@@ -32,6 +33,10 @@
 .navbar-link:hover {
   outline: none;
   background-color: none;
+}
+
+.navbar-icon {
+  user-select: none;   /* Evita que el icono sea seleccionado */
 }
 
 .navbar-link.active{
