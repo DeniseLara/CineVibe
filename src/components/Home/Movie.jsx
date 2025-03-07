@@ -127,7 +127,7 @@ const toggleFavorite = () => {
                         <ReactPlayer
                             width="100%"
                             height="100%"
-                            url={`https://www.youtube.com/watch?v=${videoKey}`}
+                            url={`https://www.youtube.com/watch?v=${videoKey}&origin=https://cinevibe-o7ln.onrender.com`}
                             controls
                         ></ReactPlayer>
                         </div>
