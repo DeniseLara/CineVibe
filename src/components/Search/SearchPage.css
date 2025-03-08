@@ -2,12 +2,6 @@ body{
     background-color: #121212;
 }
 
-
-/*.search-container{
-    padding-bottom: calc(2rem + 3rem);
-  
-}*/
-
 .movies-container{
   display: grid;
   

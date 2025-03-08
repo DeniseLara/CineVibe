@@ -36,14 +36,6 @@
   transition: all 0.3s ease;
 }
 
-/*.movie-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 1rem;
-  transition: all 0.3s ease;
-}*/
-
 /* Efecto hover: agrandar imagen y desenfoque */
 .movie-card:hover .movie-image {
   transform: scale(1.05);

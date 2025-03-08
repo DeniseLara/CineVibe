@@ -27,7 +27,7 @@
         margin-bottom: 1rem;
       }
       
-      /* 🔥 Scroll horizontal sin flechas 🔥 */
+      /* Scroll horizontal sin flechas */
       .movie-slider {
         display: flex;
         overflow-x: auto;  /* Habilita el scroll horizontal */

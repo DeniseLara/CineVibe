@@ -160,16 +160,4 @@ input:checked + .slider:before {
 
 }
 
-/*@media (min-width:1350px){
-  .path{
-    margin-left: 18rem;
-  }
-}
-
-@media (min-width:1450px){
-  .path{
-    margin-left: 20rem;
-  }
-}*/
-
 
