@@ -42,8 +42,37 @@ export const getMovieVideos = async (movieId) => {
     throw new Error('Error fetching movie videos');
   }
   const data = await response.json();
-  return data.results.length > 0 ? data.results[0].key : null;
+
+  console.log("Videos de la película:", data.results); // 🔥 Agrega esto para depuración
+
+  // Filtrar solo videos de YouTube
+  const youtubeVideos = data.results.filter(video => video.site === "YouTube");
+
+  if (youtubeVideos.length === 0) return null;
+
+  // Buscar primero un tráiler, si no hay, buscar un teaser
+  const trailer = youtubeVideos.find(video => video.type === "Trailer");
+  const teaser = youtubeVideos.find(video => video.type === "Teaser");
+
+  const videoList = trailer ? [trailer, ...youtubeVideos] : teaser ? [teaser, ...youtubeVideos] : youtubeVideos;
+
+  // Probar cada video hasta encontrar uno válido
+  for (let video of videoList) {
+    try {
+      const testUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${video.key}&format=json`;
+      const testResponse = await fetch(testUrl);
+      if (testResponse.ok) {
+        console.log(`✅ Video válido encontrado: ${video.key}`);
+        return video.key; // Retorna el primer video que sí funcione
+      }
+    } catch (error) {
+      console.log(`❌ Video no válido: ${video.key}`);
+    }
+  }
+
+  return null; // Si ninguno funciona, devolver null
 };
+
 
 // Obtener películas tendencia
 export const fetchTrendingMovies = async () => {

@@ -124,10 +124,11 @@ const toggleFavorite = () => {
                           <div className="modal-icon"><IoCloseOutline/></div>
                           </button>
                           <div className="modal-video-container">
+                            
                         <ReactPlayer
                             width="100%"
                             height="100%"
-                            url={`https://www.youtube.com/watch?v=${videoKey}&origin=https://cinevibe-o7ln.onrender.com`}
+                            url={`https://www.youtube.com/embed/${videoKey}?enablejsapi=1&origin=${window.location.origin}`}
                             controls
                         ></ReactPlayer>
                         </div>
