@@ -17,7 +17,9 @@ function SearchBar({ onSearch }) {  // 🔹 Aquí recibimos la prop onSearch
         <form className="search-form" onSubmit={handleSubmit}>
             <input 
                 type="text" 
-                placeholder="Buscar película..." 
+                id='search'
+                name='search-movie'
+                placeholder="Search for a movie..." 
                 value={query} 
                 aria-label="search movie"
                 onChange={(e) => setQuery(e.target.value)} 
