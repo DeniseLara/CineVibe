@@ -42,6 +42,7 @@
   outline: none;
   background-color: transparent;
   user-select: none;   /* Evita que el icono sea seleccionado */
+  -webkit-user-select: none; /* Soporta versiones de Safari antiguas */
 }
 
 .navbar-link.active{

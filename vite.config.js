@@ -8,4 +8,7 @@ export default defineConfig({
   server: {
     historyApiFallback: true, // Para evitar errores 404 en rutas de React
   },
+  esbuild: {
+    jsx: 'react', // Este valor asegura que los archivos JSX se procesen correctamente
+  },
 })

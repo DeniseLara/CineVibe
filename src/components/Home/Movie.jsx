@@ -57,7 +57,7 @@ const toggleFavorite = () => {
   return (
     <div className="movie-details">
 
-       <Link to="/" className="back-arrow-link">
+       <Link to="/" className="back-arrow-link" title='go back to home page'>
       <div className="back-arrow">
         <IoIosArrowRoundBack />
       </div>
@@ -97,7 +97,7 @@ const toggleFavorite = () => {
       <p className="movie-overview">{movie.overview}</p>
 
       {videoKey && (
-                            <button className="movie-button" onClick={toggleModal}>
+                            <button className="movie-button" onClick={toggleModal} aria-label="watch trailer">
                                 <div className="movie-icon">
                                     <FaPlay />
                                 </div>
@@ -120,7 +120,7 @@ const toggleFavorite = () => {
             {isModalOpen && (
                 <div className="modal-overlay active">
                     <div className="modal-content">
-                        <button className="close-modal" onClick={toggleModal}>
+                        <button className="close-modal" onClick={toggleModal} aria-label='Close windows'>
                           <div className="modal-icon"><IoCloseOutline/></div>
                           </button>
                           <div className="modal-video-container">

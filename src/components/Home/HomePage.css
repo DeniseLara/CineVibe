@@ -31,10 +31,13 @@
       .movie-slider {
         display: flex;
         overflow-x: auto;  /* Habilita el scroll horizontal */
-        scrollbar-width: none;  /* Oculta la barra de scroll en Firefox */
         -ms-overflow-style: none;  /* Oculta la barra en Edge */
         gap: 1rem;
         padding-bottom: 1rem;
+      }
+
+      .movie-slider::-webkit-scrollbar {
+        display: none;  /* Oculta la barra de desplazamiento */
       }
 
      

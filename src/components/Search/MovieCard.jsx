@@ -10,7 +10,7 @@ function MovieCard({ movie }) {
 
     return (
         <div className="movie-card-container">
-        <Link  to={`/movie/${movie.id}`} className="movie-card">
+        <Link  to={`/movie/${movie.id}`} className="movie-card" title="movie">
             <img src={imageUrl} alt={movie.title} className="movie-image" />
             <div className="movie-info">
                 <h3 className="movies-title">{movie.title}</h3>

@@ -74,7 +74,7 @@ function HomePage() {
                   className="movie-poster"
                 />
                 {/* Botón "Ver ahora" */}
-                <Link to={`/movie/${movie.id}`} className="play-button">View Details</Link>
+                <Link to={`/movie/${movie.id}`} className="play-button" title='view details'>View Details</Link>
               </div>
             ))}
           </div>

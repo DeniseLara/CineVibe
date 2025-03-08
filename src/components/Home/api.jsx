@@ -43,7 +43,6 @@ export const getMovieVideos = async (movieId) => {
   }
   const data = await response.json();
 
-  console.log("Videos de la película:", data.results); // 🔥 Agrega esto para depuración
 
   // Filtrar solo videos de YouTube
   const youtubeVideos = data.results.filter(video => video.site === "YouTube");
@@ -62,11 +61,9 @@ export const getMovieVideos = async (movieId) => {
       const testUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${video.key}&format=json`;
       const testResponse = await fetch(testUrl);
       if (testResponse.ok) {
-        console.log(`✅ Video válido encontrado: ${video.key}`);
         return video.key; // Retorna el primer video que sí funcione
       }
     } catch (error) {
-      console.log(`❌ Video no válido: ${video.key}`);
     }
   }
 

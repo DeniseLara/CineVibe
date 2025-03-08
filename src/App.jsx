@@ -47,7 +47,7 @@ function App() {
 
 {!isMoviePage && (
       <nav className='nav'>
-        <Link to="/about" className='logo'>CineVibe</Link>
+        <Link to="/about" className='logo' title='logo'>CineVibe</Link>
         <div className="mode-toggle">
           <label className="switch">
             <input type="checkbox" onChange={toggleDarkMode} checked={darkMode} />
