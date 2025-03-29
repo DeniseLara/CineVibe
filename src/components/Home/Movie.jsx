@@ -74,7 +74,10 @@ const toggleFavorite = () => {
        <div className="wrapper">
         <div className="movie-player">
             <img
-                  src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`}
+                  src={movie.poster_path
+        ? `https://image.tmdb.org/t/p/w1280${movie.poster_path}`
+        : "https://placehold.co/500x750/333/aaa?text=No+Image"}
+
                   alt={movie.title || movie.name}
                   className="movie-poster-details"
                 />

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SearchBar from './SearchBar';
 import './SearchPage.css';
 import MovieCard from './MovieCard';
-import { searchMovies } from '../Home/api';  // 🔹 Importa la función de búsqueda
+import { searchMovies } from '../Home/api';  // Importa la función de búsqueda
 
 
 function SearchPage() {
@@ -10,13 +10,11 @@ function SearchPage() {
     const [isSearching, setIsSearching] = useState(false); // Estado para saber si se está buscando
 
     const handleSearch = async (query) => {
-        console.log("Buscando:", query); // Verifica si esta función se ejecuta
         setIsSearching(true); // Empieza a buscar
         try {
             const results = await searchMovies(query);
             setSearchResults(results);
         } catch (error) {
-            console.error("Error buscando películas:", error);
         } finally {
             setIsSearching(false); // Termina la búsqueda
         }
@@ -35,9 +33,9 @@ function SearchPage() {
                     ))
                 ) : (
                     <div className="no-search-yet">
-                        <p className="no-search-message">
+                        <h2 className="no-search-message">
                             ¡Search for your favorite movies!                      
-                        </p>
+                        </h2>
                         <p className="instructions">
                         Enter a movie name in the search bar to get started.
                         </p>

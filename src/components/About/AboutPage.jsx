@@ -25,37 +25,37 @@ function AboutPage() {
         <div className="tech-cards">
           <div className="tech-card">
             <FaReact className="tech-icon react" />
-            <h3>React</h3>
+            <h3 className='tech-title'>React</h3>
             <p  className='tech-description'>Frontend and interactive components.</p>
           </div>
 
           <div className="tech-card">
             <FaCss3 className="tech-icon css" />
-            <h3>CSS</h3>
+            <h3 className='tech-title'>CSS</h3>
             <p  className='tech-description'>Responsive design and layout.</p>
           </div>
 
           <div className="tech-card">
             <BiNetworkChart className="tech-icon api" />
-            <h3>APIs</h3>
+            <h3 className='tech-title'>APIs</h3>
             <p className='tech-description'>Real-time data consumption.</p>
           </div>
 
           <div className="tech-card">
             <TbRoute className="tech-icon router" />
-            <h3>React Router</h3>
+            <h3 className='tech-title'>React Router</h3>
             <p  className='tech-description'>Page navigation.</p>
           </div>
 
           <div className="tech-card">
             <IoLogoJavascript className="tech-icon js" />
-            <h3>JavaScript</h3>
+            <h3 className='tech-title'>JavaScript</h3>
             <p  className='tech-description'>Modern and optimized functions.</p>
           </div>
 
           <div className="tech-card">
             <TbBrandVite className="tech-icon js" />
-            <h3>Vite</h3>
+            <h3 className='tech-title'>Vite</h3>
             <p  className='tech-description'>Development and production performance optimization.</p>
           </div>
         </div>
@@ -69,8 +69,8 @@ function AboutPage() {
       </section>
 
       <section className="credits">
-        <h2>Credits</h2>
-        <p>
+        <h2 className="about-subtitle">Credits</h2>
+        <p className="about-description">
         This project uses the <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">TMDB</a> API to get data about movies.
         </p>
       </section>

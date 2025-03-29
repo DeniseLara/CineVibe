@@ -49,7 +49,7 @@ function FavoritePage() {
                     ))}
                 </div>
             ) : (
-                <p>No favorite movies yet!</p>
+                <p className='favorite-message'>No favorite movies yet!</p>
             )}
         </div>
     );

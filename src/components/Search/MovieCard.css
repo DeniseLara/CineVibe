@@ -1,5 +1,3 @@
-/* Estilo de la tarjeta */
-
 .movie-card-container{
   display: grid;
   grid-template-columns: 
@@ -28,7 +26,6 @@
 }
 
 /* Imagen de la película */
-
 .movie-image{
   width: 100%;
   height: auto;
@@ -104,7 +101,7 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive */
+/** MEDIA QUERYS **/
 @media (max-width: 768px) {
   .movie-card {
     aspect-ratio: 3 / 4;

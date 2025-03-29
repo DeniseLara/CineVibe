@@ -1,6 +1,4 @@
-
-
-/* Modo Claro */
+/* MODO CLARO */
 .light {
   background-color: #ffffff;
   color: #121212;
@@ -69,84 +67,80 @@
   color: #ffffff;
 }
 
-@media (min-width:340px){
+/*mobile*/
+.Movie{
+  padding-left: 0;
+ padding-right: 0;
+}
 
+.logo{
+  text-align: start;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #FFC107;
+  transition: color .4s ease-in-out;
+}
 
-  .Movie{
-    padding-left: 0;
-   padding-right: 0;
-  }
-
-
-
-  .logo{
-    text-align: start;
-    font-size: 1.2rem;
-    font-weight: 900;
-    color: #FFC107;
-    transition: color .4s ease-in-out;
-  }
-
-  .nav{
-    padding: 1rem 0.8rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
+.nav{
+  padding: 1rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* Estilo del toggle switch */
 .mode-toggle {
-  font-size: 1rem;
+font-size: 1rem;
 }
 
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 2.2rem;
-  height: 1.3rem;
+position: relative;
+display: inline-block;
+width: 2.2rem;
+height: 1.3rem;
 }
 
 .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+opacity: 0;
+width: 0;
+height: 0;
 }
 
 .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: .4s;
-  border-radius: 1rem;
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 1rem;
 }
 
 .slider:before {
-  position: absolute;
-  content: "";
-  height: 0.8rem;
-  width: 0.8rem;
-  border-radius: 50%;
-  left: 0.25rem;
-  bottom: 0.25rem;
-  background-color: white;
-  transition: .4s;
+position: absolute;
+content: "";
+height: 0.8rem;
+width: 0.8rem;
+border-radius: 50%;
+left: 0.25rem;
+bottom: 0.25rem;
+background-color: white;
+transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2272FF;
+background-color: #2272FF;
 }
 
 input:checked + .slider:before {
-  transform: translateX(14px);
-}
+transform: translateX(14px);
 }
 
-@media (min-width:1024px){
+
+/** MEDIA QUERYS **/
+@media (min-width:1024px) and (max-height:900px){
  
  .logo{
   display: none;

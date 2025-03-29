@@ -7,7 +7,6 @@ import {
   fetchSeries,
 } from './api';
 import './HomePage.css';
-//import SkeletonCard from './SkeletonCard'; // Importa el SkeletonCard
 import { Link } from 'react-router-dom';
 
 function HomePage() {
@@ -51,12 +50,6 @@ function HomePage() {
     { title: 'Series', id: 'series' },
     { title: 'Romance', id: 'romance' },
   ];
-
-  {/*useEffect(() => {
-    // Simulación de carga (puedes reemplazarlo con tu lógica de carga real)
-    const timer = setTimeout(() => setIsLoading(false), 1000);
-    return () => clearTimeout(timer);
-  }, []);*/}
 
   return (
     <div className="home-container">

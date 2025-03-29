@@ -1,12 +1,11 @@
-
 .search-form{
  display: flex;
  padding-left: 0.5rem;
  border-radius: 2rem;
  width: 100%;
+ position: relative;
+ transition: all .3s ease-in-out;
  justify-content: center;
- box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
- border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .search-bar {
@@ -16,67 +15,82 @@
     background-color: rgba(255, 255, 255, 0.377);
     border-radius: 2rem;
     box-shadow: 0px 4px 10px rgba(235, 222, 222, 0.121);
-  }
+}
   
-  .search-input {
+.search-input {
     background: transparent;
     border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     width: 100%;
     border-radius: 2rem;
     outline: none;
+    transition: all .3s ease-in-out;
     font-size: clamp(1rem, 2vw, 1.2rem);
     color: #fff;
-    padding: 0.5rem;
-    
-  }
+    padding: 0.7rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
   
-  .search-input::placeholder {
+.search-input::placeholder {
     color: rgba(255, 255, 255, 0.5);
-  }
+}
+
+.search-input:focus{
+    border: 1px solid #c56c1c;
+    box-shadow: 0 0 4px rgba(197, 108, 28, 0.5);
+}
   
-  .search-button {
+.search-button {
     background: linear-gradient(135deg, #ff3d00, #ff7300);
     border: none;
     outline: none;
-    color: #ffffff;
-    font-size: 1.2rem;
-    display: flex;
-    position: relative;
-    border-radius: 10rem;
-    align-items: center;
-    justify-content: center;
+    right: 0;
+    padding: 0.5rem 0.8rem;
+    top: 0;
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    border-radius: 5rem;
     cursor: pointer;
     transition: all 0.3s;
-  }
+}
 
-  .search-icon{
-    position: absolute;
+.search-icon{
     font-size: 1.4rem;
-  }
+}
 
-  .search-button:focus{
+.search-button:focus,
+.search-button:active{
     outline: none;
-  }
+    background-color: transparent;
+}
   
-  .search-button:hover {
+.search-button:hover {
     background: linear-gradient(135deg, #ff7300, #ff3d00);
     transform: scale(1.1);
-  }
-  
-  @media (max-width: 768px) {
-    
+}
+
+
+/** MEDIA QUERYS **/
+@media (max-width: 768px) {
     
     .search-input {
         font-size: 1rem;
     }
-  }
 
-  @media (min-width:1024px){
+}
+
+
+@media (min-width:1024px){
     .search-form{
-
       max-width: 80%;
-     
-     
      }
-  }
+
+     .search-button{
+      padding: 0.5rem 1rem;
+     }
+
+     .search-icon{
+      font-size: 1.5rem;
+    }
+}
   

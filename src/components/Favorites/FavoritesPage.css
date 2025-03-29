@@ -1,18 +1,15 @@
 .favorites-container {
-    /*background-color: #121212;*/
-    /*color: #ffffff;*/
     padding-bottom: 3rem;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
     margin-top: 1.5rem;
 }
 
 .favorite-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
     text-align: center;
-    /*color: #fff;*/
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -24,8 +21,7 @@
     padding: 1rem 2rem;
     width: 100%;
     max-width: 100%;
-    padding-bottom: calc(2rem + 3rem); /* 2rem del padding + 40px de margen extra */
-
+    padding-bottom: calc(2rem + 3rem); /* 2rem del padding + 3rem de margen extra */
 }
 
 .favorite-item {
@@ -118,6 +114,7 @@
     color: #999;
 }
 
+/** MEDIA QUERYS **/
 @media (min-width: 768px) {
 
     .favorites-list {
@@ -126,7 +123,8 @@
     
 }
 
-@media (min-width: 1024px) {
+
+@media (min-width: 1024px) and (max-height:1100px){
     .favorites-list {
         padding: 1rem 0rem;
         grid-template-columns: repeat(4, 1fr); /* Añadimos más columnas en pantallas grandes */
@@ -134,10 +132,31 @@
 
     .favorites-container{
         margin-left: 44vh;
-      }
+        padding-left: 1%;
+    padding-right: 1%;
+    }
 
     .favorite-title{
         text-align: start;
+    }
+}
+
+
+@media (min-width:1280px){
+  .favorites-container{
+    margin-left: 42vh;
+  }
+}
+
+
+@media (min-width:1920px){
+    .favorites-container{
+       margin-left: 40vh;
+        margin-top: 2rem;
+    }
+
+    .favorite-message{
+        font-size: 1.5rem;
     }
 }
 
