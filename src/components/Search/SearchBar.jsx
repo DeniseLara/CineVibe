@@ -25,8 +25,13 @@ function SearchBar({ onSearch }) {  // Aquí recibimos la prop onSearch
                 onChange={(e) => setQuery(e.target.value)} 
                 className="search-input"
             />
-            <button type="submit" className="search-button" aria-label='search'>
-                <div className='search-icon'><IoSearch /></div>
+            <button 
+            type="submit" 
+            className="search-button" 
+            aria-label='search'>
+                <div className='search-icon'>
+                    <IoSearch />
+                </div>
             </button>
         </form>
     );

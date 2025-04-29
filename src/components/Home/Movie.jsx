@@ -100,7 +100,10 @@ const toggleFavorite = () => {
       <p className="movie-overview">{movie.overview}</p>
 
       {videoKey && (
-                            <button className="movie-button" onClick={toggleModal} aria-label="watch trailer">
+                            <button className="movie-button" 
+                            onClick={toggleModal} 
+                            aria-label="watch trailer"
+                            type='button'>
                                 <div className="movie-icon">
                                     <FaPlay />
                                 </div>
@@ -123,11 +126,16 @@ const toggleFavorite = () => {
             {isModalOpen && (
                 <div className="modal-overlay active">
                     <div className="modal-content">
-                        <button className="close-modal" onClick={toggleModal} aria-label='Close windows'>
-                          <div className="modal-icon"><IoCloseOutline/></div>
+                        <button className="close-modal" 
+                        onClick={toggleModal} 
+                        aria-label='Close windows'
+                        type='button'>
+                          <div className="modal-icon">
+                            <IoCloseOutline/>
+                            </div>
                           </button>
-                          <div className="modal-video-container">
-                            
+
+                          <div className="modal-video-container">  
                         <ReactPlayer
                             width="100%"
                             height="100%"

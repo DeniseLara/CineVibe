@@ -41,6 +41,7 @@ function FavoritePage() {
                                     className="remove-favorite"
                                     onClick={() => removeFavorite(movie.id)}
                                     aria-label='remove movie'
+                                    type='button'
                                 >
                                     <FaTrashAlt/>
                                 </button>
