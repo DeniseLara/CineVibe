@@ -71,7 +71,7 @@ function AboutPage() {
       <section className="credits">
         <h2 className="about-subtitle">Credits</h2>
         <p className="about-description">
-        This project uses the <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">TMDB</a> API to get data about movies.
+        This project uses the <a className='about-credit' href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">TMDB</a> API to get data about movies.
         </p>
       </section>
     </div>

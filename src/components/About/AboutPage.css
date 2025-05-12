@@ -16,14 +16,20 @@
 }
 
 .about-subtitle {
+  color: #a0b8ff; /* azul grisáceo claro */
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 
 .about-description {
+  color: rgba(255, 255, 255, 0.85); /* gris muy claro sin usar opacity */
   font-size: 1.2rem;
   line-height: 1.6;
   opacity: 0.9;
+}
+
+.about-credit{
+  transition: all .3s ease-in-out;
 }
 
 /*Estilos de las Tarjetas de Tecnologías */

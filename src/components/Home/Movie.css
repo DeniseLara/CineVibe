@@ -238,7 +238,7 @@
     max-width: 50rem;
     background: #1c1c1e;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 2.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
@@ -257,15 +257,16 @@
 /* Botón de cerrar */
 .close-modal {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0.3rem;
+    right: 0.5rem;
     background: transparent;
     border: none;
+    padding: 0;
     outline: none;
     font-size: 2rem;
     color: #ffffff;
     cursor: pointer;
-    transition: transform 0.2s ease, color 0.2s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .close-modal:focus{
@@ -280,7 +281,8 @@
 /* Contenedor del video */
 .modal-video-container {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    /*aspect-ratio: 16 / 9;*/
+    aspect-ratio: 12 / 6;
     border-radius: 0.8rem;
     overflow: hidden;
     box-shadow: 0px 4px 10px rgba(241, 234, 232, 0.3);
@@ -377,8 +379,8 @@
     
     .movie-details {
         max-width: 100%;
-        margin-left: 42vh; /* Asegura que el contenido respete el espacio del navbar */
-        padding: 2rem 1.5rem;
+        margin-left: 40vh; /* Asegura que el contenido respete el espacio del navbar */
+        padding: 2rem;
     }
 
     .wrapper {
