@@ -1,10 +1,9 @@
 import './AboutPage.css';
-import { FaReact } from "react-icons/fa";
-import { FaCss3 } from "react-icons/fa";
+
+import { FaReact, FaCss3 } from "react-icons/fa";
 import { BiNetworkChart } from "react-icons/bi";
-import { TbRoute } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io";
-import { TbBrandVite } from "react-icons/tb";
+import { TbBrandVite, TbRoute } from "react-icons/tb";
 
 function AboutPage() {
   return (
@@ -24,37 +23,37 @@ function AboutPage() {
         <h2 className="about-subtitle tech">Technologies Used</h2>
         <div className="tech-cards">
           <div className="tech-card">
-            <FaReact className="tech-icon react" />
+            <FaReact className="tech-icon react" aria-label="React logo"/>
             <h3 className='tech-title'>React</h3>
             <p  className='tech-description'>Frontend and interactive components.</p>
           </div>
 
           <div className="tech-card">
-            <FaCss3 className="tech-icon css" />
+            <FaCss3 className="tech-icon css" aria-label="CSS logo"/>
             <h3 className='tech-title'>CSS</h3>
             <p  className='tech-description'>Responsive design and layout.</p>
           </div>
 
           <div className="tech-card">
-            <BiNetworkChart className="tech-icon api" />
+            <BiNetworkChart className="tech-icon api" aria-label="APIs icon"/>
             <h3 className='tech-title'>APIs</h3>
             <p className='tech-description'>Real-time data consumption.</p>
           </div>
 
           <div className="tech-card">
-            <TbRoute className="tech-icon router" />
+            <TbRoute className="tech-icon router" aria-label="React router icon"/>
             <h3 className='tech-title'>React Router</h3>
             <p  className='tech-description'>Page navigation.</p>
           </div>
 
           <div className="tech-card">
-            <IoLogoJavascript className="tech-icon js" />
+            <IoLogoJavascript className="tech-icon js" aria-label="JavaScript logo"/>
             <h3 className='tech-title'>JavaScript</h3>
             <p  className='tech-description'>Modern and optimized functions.</p>
           </div>
 
           <div className="tech-card">
-            <TbBrandVite className="tech-icon js" />
+            <TbBrandVite className="tech-icon js" aria-label="Vite logo"/>
             <h3 className='tech-title'>Vite</h3>
             <p  className='tech-description'>Development and production performance optimization.</p>
           </div>

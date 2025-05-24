@@ -116,7 +116,11 @@
 
 /* Estilo del toggle switch */
 .mode-toggle {
-font-size: 1rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .switch {

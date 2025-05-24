@@ -1,7 +1,5 @@
 .favorites-container {
-    padding-bottom: 3rem;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding: 0 3% 3rem;
     margin-top: 1.5rem;
 }
 
@@ -16,17 +14,16 @@
 
 .favorites-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Asegura que haya 2 o más columnas */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     gap: 2rem;
-    padding: 1rem 2rem;
     width: 100%;
+    padding: 1rem 2rem calc(2rem + 3rem);
     max-width: 100%;
-    padding-bottom: calc(2rem + 3rem); /* 2rem del padding + 3rem de margen extra */
 }
 
 .favorite-item {
     background-color: #1e1e1e;
-    border-radius: 12px;
+    border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
@@ -51,13 +48,13 @@
 }
 
 .favorite-item:hover .favorite-image {
-    transform: scale(1.05); /* Zoom in effect */
+    transform: scale(1.05); 
 }
 
 .favorite-info {
     padding: 1rem;
     text-align: center;
-    border-radius: 0 0 12px 12px;
+    border-radius: 0 0 1rem 1rem;
     position: absolute;
     top: 0;
     right: 0;
@@ -73,10 +70,10 @@
 
 .remove-favorite {
     background-color: transparent;
-    color: #ffffff; /* Rojo brillante */
-    border: 2px solid #ffffff; /* Borde rojo */
+    color: #ffffff; 
+    border: 2px solid #ffffff; 
     padding: 0.5rem 1rem;
-    border-radius: 50px; /* Esquinas redondeadas */
+    border-radius: 1.5rem; 
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -88,23 +85,23 @@
 
 .remove-favorite:hover {
     background-color: #f92a2a;
-    color: #fff; /* Blanco cuando se hace hover */
-    border: 2px solid transparent; /* El borde se hace invisible al hacer hover */
-    transform: translateY(-3px); /* Le da un pequeño efecto de "flotado" */
+    color: #fff; 
+    border: 2px solid transparent; 
+    transform: translateY(-3px); 
 }
 
 .remove-favorite:focus {
-    outline: none; /* Elimina el contorno por defecto */
-    box-shadow: 0 0 0 3px rgba(249, 42, 42, 0.5); /* Efecto de enfoque suave */
+    outline: none; 
+    box-shadow: 0 0 0 3px rgba(249, 42, 42, 0.5); 
 }
 
 .remove-favorite svg {
-    font-size: 1.2rem; /* Icono más grande */
+    font-size: 1.2rem; 
     transition: transform 0.2s ease;
 }
 
 .remove-favorite:hover svg {
-    transform: rotate(90deg); /* Rota el icono cuando se hace hover */
+    transform: rotate(90deg);
 }
 
 .empty-message {
@@ -116,24 +113,21 @@
 
 /** MEDIA QUERYS **/
 @media (min-width: 768px) {
-
     .favorites-list {
         grid-template-columns: repeat(3, 1fr);
     }
-    
 }
 
 
 @media (min-width: 1024px) and (max-height:1100px){
     .favorites-list {
         padding: 1rem 0rem;
-        grid-template-columns: repeat(4, 1fr); /* Añadimos más columnas en pantallas grandes */
+        grid-template-columns: repeat(4, 1fr); 
     }
 
     .favorites-container{
         margin-left: 44vh;
-        padding-left: 1%;
-    padding-right: 1%;
+        padding: 0 1% 3rem;
     }
 
     .favorite-title{
@@ -144,7 +138,7 @@
 
 @media (min-width:1280px){
   .favorites-container{
-    margin-left: 42vh;
+      margin-left: 42vh;
   }
 }
 
@@ -152,11 +146,11 @@
 @media (min-width:1920px){
     .favorites-container{
        margin-left: 40vh;
-        margin-top: 2rem;
+       margin-top: 2rem;
     }
 
     .favorite-message{
-        font-size: 1.5rem;
+       font-size: 1.5rem;
     }
 }
 

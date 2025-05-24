@@ -1,4 +1,3 @@
-import React from "react";
 import "./MovieCard.css";
 import { Link } from "react-router-dom";
 import { MdStarRate } from "react-icons/md";

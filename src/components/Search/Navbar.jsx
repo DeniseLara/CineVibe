@@ -1,5 +1,4 @@
-import { IoHomeSharp } from "react-icons/io5";
-import { IoSearchSharp } from "react-icons/io5";
+import { IoHomeSharp, IoSearchSharp } from "react-icons/io5";
 import { MdFavorite } from "react-icons/md";
 import { BiInfoCircle } from "react-icons/bi";
 import { Link, useLocation } from 'react-router-dom'; // Importa Link de React Router DOM
@@ -9,20 +8,19 @@ import './Navbar.css'
 function Navbar(){
     const location = useLocation(); // Obtener la ubicación actual de la URL
 
-     // Función para verificar si el enlace está activo
-  const isActive = (path) => location.pathname === path;
+    // Función para verificar si el enlace está activo
+    const isActive = (path) => location.pathname === path;
 
     return(
-     <>
      <nav className="navbar">
      <Link to="/about" className='navbar-logo' title="logo">CineVibe</Link>
 
         <ul className="navbar-list">
-
             <li className="navbar-item">
             <Link 
             to="/" 
             className={`navbar-link ${isActive('/') ? 'active' : ''}`}
+            aria-label="Home page"
             title="home page"
             > 
             <div className="navbar-icon"><IoHomeSharp /> </div>
@@ -33,7 +31,8 @@ function Navbar(){
             <li className="navbar-item">
                 <Link 
                 to="/search" 
-                className={`navbar-link ${isActive('/search') ? 'active' : ''}`} 
+                className={`navbar-link ${isActive('/search') ? 'active' : ''}`}
+                aria-label="Search page" 
                 title="search page"
                 >
                 <div className="navbar-icon"><IoSearchSharp /></div> 
@@ -44,7 +43,8 @@ function Navbar(){
             <li className="navbar-item">
                 <Link 
                 to="/favorites" 
-                className={`navbar-link ${isActive('/favorites') ? 'active' : ''}`} 
+                className={`navbar-link ${isActive('/favorites') ? 'active' : ''}`}
+                aria-label="Favorites page" 
                 title="favorites page"
                 >
                 <div className="navbar-icon"><MdFavorite /> </div>
@@ -55,7 +55,8 @@ function Navbar(){
             <li className="navbar-item">
                 <Link 
                 to="/about" 
-                className={`navbar-link ${isActive('/about') ? 'active' : ''}`} 
+                className={`navbar-link ${isActive('/about') ? 'active' : ''}`}
+                aria-label="About page" 
                 title="about page"
                 >
                 <div className="navbar-icon"><BiInfoCircle/> </div>
@@ -65,7 +66,6 @@ function Navbar(){
 
         </ul>
      </nav>
-     </>
     );
 }
 

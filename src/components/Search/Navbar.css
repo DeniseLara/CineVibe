@@ -23,8 +23,8 @@
   color:  #808080;
   font-size: 1.5rem;
   text-decoration: none;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  transition: all .3s ease; /* Transición suave */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  transition: all .3s ease; 
 }
 
 .navbar-link:focus-visible,
@@ -39,12 +39,12 @@
 .navbar-icon:hover {
   outline: none;
   background-color: transparent;
-  user-select: none;   /* Evita que el icono sea seleccionado */
-  -webkit-user-select: none; /* Soporta versiones de Safari antiguas */
+  user-select: none;  
+  -webkit-user-select: none; 
 }
 
 .navbar-link.active{
-  color: #fff; /* Cambia el color del texto */
+  color: #fff; 
 }
 
 .navbar-link:active{
@@ -53,7 +53,7 @@
 }
 
 .navbar-link:hover {
-  color: #fff; /* Cambia el color del texto */
+  color: #fff; 
 }
 
 .navbar-description{
@@ -63,93 +63,24 @@
 
 /** MEDIA QUERYS **/
 @media (min-width:768px){
-
   .navbar-link{
     font-size: 2rem;
-  }
-
-}
-
-
-@media (min-width: 1024px) and (min-height: 1200px) {
-
-  .navbar{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem 0;
-    z-index: 1000;
-    background-color: #1E1E1E;
-  }
-
-  .navbar-logo{
-    display: none;
-    transition: color .4s ease-in-out;
-  }
-  
-  .navbar-list{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .navbar-link{
-    color:  #808080;
-    text-decoration: none;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    transition: all .3s ease; /* Transición suave */
-  }
-  
-  .navbar-link:focus-visible,
-  .navbar-link:focus,
-  .navbar-link:hover {
-    outline: none;
-    background-color: transparent;
-  }
-  
-  .navbar-icon:focus-visible,
-  .navbar-icon:focus,
-  .navbar-icon:hover {
-    outline: none;
-    background-color: transparent;
-    user-select: none;   /* Evita que el icono sea seleccionado */
-    -webkit-user-select: none; /* Soporta versiones de Safari antiguas */
-  }
-  
-  .navbar-link.active{
-    color: #fff; /* Cambia el color del texto */
-  }
-  
-  .navbar-link:active{
-    outline: none;
-    background: transparent;
-  }
-  
-  .navbar-link:hover {
-    color: #fff; /* Cambia el color del texto */
-  }
-  
-  .navbar-description{
-      display: none;
   }
 }
 
  
-/* Estilo para pantallas grandes (1024px o más) */
 @media (min-width: 1024px) and (max-height:1100px) {
     .navbar {
-      position: fixed;
       top: 0;
       display: flex;
       padding-left: 4rem;
       justify-content: flex-start;
       align-items: center;
       left: 0;
-      width: 42vh; /* Ancho fijo para el navbar lateral */
-      height: 100vh; /* Altura completa de la pantalla */
-      border-radius: 0; /* Quitamos el borde redondeado */
-      box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2); /* Sombra suave desde la derecha */
+      width: 42vh; 
+      height: 100vh; 
+      border-radius: 0; 
+      box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2); 
     }
 
     .navbar-logo{
@@ -164,37 +95,37 @@
     .navbar-list {
       margin-top: 2rem;
       align-items: initial;
-      flex-direction: column; /* Cambiamos a diseño vertical */
-      gap: 4rem; /* Espaciado entre los íconos */
+      flex-direction: column; 
+      gap: 4rem; 
     }
   
     .navbar-link {
       display: flex;
       align-items: center;
       gap: 1.2rem;
-      font-size: 1.2rem; /* Aumentamos el tamaño de los íconos */
+      font-size: 1.2rem; 
     }
   
     .navbar-link span {
-      font-size: 0.8rem; /* Texto debajo del ícono */
+      font-size: 0.8rem; 
       margin-top: 0.5rem;
       color: #B0B0B0;
     }
   
     .navbar-link:hover span {
-      color: #FFFFFF; /* Cambia el color del texto al pasar el cursor */
+      color: #FFFFFF; 
     }
 
     .navbar-description{
-        display: initial;
-        font-weight: 400;
+      display: initial;
+      font-weight: 400;
     }
 }
 
 
 @media (min-width:1280px){
   .navbar {
-    width: 40vh; /* Ancho fijo para el navbar lateral */
+    width: 40vh; 
   }
 }
 
@@ -202,11 +133,11 @@
 @media (min-width:1920px){
   .navbar {
     padding-left: 5rem;
-    width: 38vh; /* Ancho fijo para el navbar lateral */
+    width: 38vh; 
   }
 
   .navbar-link {
-    font-size: 1.8rem; /* Aumentamos el tamaño de los íconos */
+    font-size: 1.8rem; 
   }
 
   .navbar-list{

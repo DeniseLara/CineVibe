@@ -1,49 +1,40 @@
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 const BASE_URL = 'https://api.themoviedb.org/3';
 
+// Función genérica para validar y devolver JSON
+const fetchJson = async (url) => {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Error fetching from ${url}`);
+  }
+  return response.json();
+};
+
 // Función genérica para hacer peticiones a la API
 const fetchData = async (endpoint, queryParams = '') => {
   const url = `${BASE_URL}${endpoint}?api_key=${API_KEY}${queryParams ? `&${queryParams}` : ''}`;
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error(`Error fetching data from ${url}`);
-  }
-  const data = await response.json();
+  const data = await fetchJson(url);
   return data.results || [];
 };
 
 // Nueva función para buscar películas
 export const searchMovies = async (query) => {
-  return fetchData('/search/movie', `query=${query}`);
+  return fetchData('/search/movie', `query=${encodeURIComponent(query)}`);
 };
 
 // Función para obtener detalles de una película
 export const getMovieDetails = async (movieId) => {
-  const response = await fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`);
-  if (!response.ok) {
-    throw new Error('Error fetching movie details');
-  }
-  return response.json();
+  return fetchJson(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`);
 };
 
 // Función para obtener los créditos (actores) de una película
 export const getMovieCredits = async (movieId) => {
-  const response = await fetch(`${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}`);
-  if (!response.ok) {
-    throw new Error('Error fetching movie credits');
-  }
-  return response.json();
+  return fetchJson(`${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}`);
 };
 
 // Función para obtener los videos de una película
 export const getMovieVideos = async (movieId) => {
-  const response = await fetch(`${BASE_URL}/movie/${movieId}/videos?api_key=${API_KEY}`);
-  if (!response.ok) {
-    throw new Error('Error fetching movie videos');
-  }
-  const data = await response.json();
-
-
+  const data = await fetchJson(`${BASE_URL}/movie/${movieId}/videos?api_key=${API_KEY}`);
   // Filtrar solo videos de YouTube
   const youtubeVideos = data.results.filter(video => video.site === "YouTube");
 

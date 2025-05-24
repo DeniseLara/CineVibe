@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './SearchBar.css';
 import { IoSearch } from "react-icons/io5";
 
@@ -15,6 +15,7 @@ function SearchBar({ onSearch }) {  // Aquí recibimos la prop onSearch
 
     return (
         <form className="search-form" onSubmit={handleSubmit}>
+            <label htmlFor="search" className="visually-hidden">Search movie</label>
             <input 
                 type="text" 
                 id='search'

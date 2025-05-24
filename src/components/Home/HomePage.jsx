@@ -22,22 +22,19 @@ function HomePage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const trending = await fetchTrendingMovies();
-        const popular = await fetchPopularMovies();
-        const comedy = await fetchComedyMovies();
-        const romance = await fetchRomanceMovies();
-        const series = await fetchSeries();
-
-        setMoviesByCategory({
-          trending,
-          popular,
-          comedy,
-          romance,
-          series,
-        });
+        const [trending, popular, comedy, romance, series] = await Promise.all([
+        fetchTrendingMovies(),
+        fetchPopularMovies(),
+        fetchComedyMovies(),
+        fetchRomanceMovies(),
+        fetchSeries(),
+      ]);
+      setMoviesByCategory({ trending, popular, comedy, romance, series });
       } catch (error) {
         console.error('Error fetching data:', error);
-      } 
+      } finally {
+        setIsLoading(false)
+      }
     };
 
     fetchData();
@@ -53,10 +50,13 @@ function HomePage() {
 
   return (
     <div className="home-container">
-      
       <h1 className="home-title">Discover, save, and enjoy your favorite movies</h1>
-      {categories.map((category) => (
-        <div key={category.id} className="category">
+
+      {isLoading ? (
+        <p className="loading">Loading...</p>  
+      ) : (
+      categories.map((category) => (
+        <div key={category.id} className="category" role="region" aria-label={`${category.title} movies`}>
           <p className="category-title">{category.title}</p>
           <div className="movie-slider">
             {moviesByCategory[category.id].map((movie) => (
@@ -72,8 +72,7 @@ function HomePage() {
             ))}
           </div>
         </div>
-      )
-      
+      ))
       )}
     </div>
   );

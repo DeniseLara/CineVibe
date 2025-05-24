@@ -16,8 +16,8 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    filter: blur(10px);  /* Aplica desenfoque */
-    z-index: -1; /* Envía la imagen al fondo */
+    filter: blur(10px);  
+    z-index: -1; 
 }
 
 /* Oscurece el fondo para mejor contraste */
@@ -26,10 +26,9 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Ajusta la opacidad */
+    background: rgba(0, 0, 0, 0.6); 
 }
 
-/* Botón de volver */
 .back-arrow-link {
     display: inline-flex;
     align-items: center;
@@ -62,7 +61,7 @@
     flex-direction: column;
     gap: 2rem;
     position: relative;
-    padding-bottom: calc(2rem + 3rem); /* 2rem del padding + 40px de margen extra */
+    padding-bottom: calc(2rem + 3rem); 
 }
 
 /* Sección de imagen */
@@ -93,7 +92,7 @@
 
 /* Cambia de color si la película está guardada */
 .save-icon.saved {
-    color: #ffcc00; /* Amarillo */
+    color: #ffcc00; 
 }
 
 .movie-poster-details {
@@ -218,7 +217,7 @@
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para Safari */
+    -webkit-backdrop-filter: blur(10px); 
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
@@ -281,7 +280,6 @@
 /* Contenedor del video */
 .modal-video-container {
     width: 100%;
-    /*aspect-ratio: 16 / 9;*/
     aspect-ratio: 12 / 6;
     border-radius: 0.8rem;
     overflow: hidden;
@@ -304,11 +302,9 @@
 
 /** MEDIA QUERYS **/
 @media (min-width: 768px) {
-
     .movie-details{
         padding: 2rem 2.5rem;
     }
-
 }
 
 
@@ -317,7 +313,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-      }
+    }
 
     .modal-content {
         width: 70%;
@@ -348,7 +344,6 @@
         font-size: 2.2rem;
     }
 
-    /* Fondo desenfocado */
    .movie-background {
     position: absolute;
     top: 0;
@@ -357,9 +352,9 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    filter: blur(10px);  /* Aplica desenfoque */
-    z-index: -1; /* Envía la imagen al fondo */
-   }
+    filter: blur(10px);  
+    z-index: -1;
+    }
 
 /* Oscurece el fondo para mejor contraste */
 .movie-background::before {
@@ -367,7 +362,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Ajusta la opacidad */
+    background: rgba(0, 0, 0, 0.6); 
 }
 
     .movie {
@@ -379,7 +374,7 @@
     
     .movie-details {
         max-width: 100%;
-        margin-left: 40vh; /* Asegura que el contenido respete el espacio del navbar */
+        margin-left: 40vh; 
         padding: 2rem;
     }
 
@@ -387,7 +382,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding-bottom: 0; /* 2rem del padding + 40px de margen extra */
+        padding-bottom: 0; 
     }
 
     .movie-player {
@@ -413,7 +408,6 @@
 
 
 @media (min-width:1280px){
-    
     .movie-details {
         padding: 4.5rem 2rem;
     }
