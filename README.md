@@ -30,3 +30,9 @@ CineVibe es una aplicación web para explorar películas, ver sus trailers, leer
 Este proyecto está desplegado en:
 🔗 https://cinevibe-o7ln.onrender.com
 
+
+# 🗒️ Notas
+
+- La aplicación utiliza la API de TMDb; por lo tanto, los trailers pueden variar en calidad o disponibilidad.
+- Este proyecto es de demostración y no almacena usuarios ni sesiones.
+- Los favoritos se guardan localmente en el navegador usando LocalStorage.
