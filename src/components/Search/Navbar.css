@@ -21,6 +21,10 @@
 
 .navbar-link{
   color:  #808080;
+  padding: 0;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* quita el flash azul en móviles */
+  border: none;
   font-size: 1.5rem;
   text-decoration: none;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
