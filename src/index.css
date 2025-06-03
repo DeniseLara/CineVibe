@@ -27,10 +27,6 @@ html{
   scroll-behavior: smooth;
 }
 
-body{
-  transition: all .3s ease;
-}
-
 .route{
   background-color: #121212;
 }
