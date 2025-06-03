@@ -5,7 +5,7 @@ import {
   fetchComedyMovies,
   fetchRomanceMovies,
   fetchSeries,
-} from './api';
+} from '../../services/api';
 import './HomePage.css';
 import { Link } from 'react-router-dom';
 
@@ -56,22 +56,22 @@ function HomePage() {
         <p className="loading">Loading...</p>  
       ) : (
       categories.map((category) => (
-        <div key={category.id} className="category" role="region" aria-label={`${category.title} movies`}>
-          <p className="category-title">{category.title}</p>
-          <div className="movie-slider">
+        <section key={category.id} className="category" role="region" aria-label={`${category.title} movies`}>
+          <h2 className="category-title">{category.title}</h2>
+          <ul className="movie-slider">
             {moviesByCategory[category.id].map((movie) => (
-              <div key={movie.id} className="movie-slide">
+              <li key={movie.id} className="movie-slide">
                 <img
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                   alt={movie.title || movie.name}
                   className="movie-poster"
                 />
                 {/* Botón "Ver ahora" */}
-                <Link to={`/movie/${movie.id}`} className="play-button" title='view details'>View Details</Link>
-              </div>
+                <Link to={`/movie/${movie.id}`} className="play-button">View Details</Link>
+              </li>
             ))}
-          </div>
-        </div>
+          </ul>
+        </section>
       ))
       )}
     </div>

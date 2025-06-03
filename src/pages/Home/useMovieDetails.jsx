@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { getMovieDetails, getMovieCredits, getMovieVideos } from './api';
+import { getMovieDetails, getMovieCredits, getMovieVideos } from '../../services/api';
 
-function useMovieDetails(movieId) {
+export function useMovieDetails(movieId) {
   const [movie, setMovie] = useState(null);
   const [actors, setActors] = useState([]);
   const [videoKey, setVideoKey] = useState(null);
@@ -30,4 +30,3 @@ function useMovieDetails(movieId) {
   return { movie, actors, videoKey };
 }
 
-export default useMovieDetails;

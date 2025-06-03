@@ -1,13 +1,7 @@
 import { useState } from 'react';
-import { useParams, Link } from "react-router-dom";
-import ReactPlayer from 'react-player';
-import useMovieDetails from './useMovieDetails';
-import useFavorites from '../custom hook/useFavorites';
-
-/*import { IoIosArrowRoundBack } from "react-icons/io";
-import { CiSaveDown2 } from "react-icons/ci";
-import { FaPlay } from "react-icons/fa6";
-import { IoCloseOutline } from "react-icons/io5";*/
+import { useParams } from "react-router-dom";
+import { useMovieDetails } from './useMovieDetails';
+import { useFavorites } from '../../hooks/useFavorites';
 
 import MovieHeader from './MovieHeader';
 import MovieInfo from './MovieInfo';
@@ -28,17 +22,13 @@ const toggleModal = () => {
   setIsModalOpen(!isModalOpen);
 };
 
-const handleSaveClick = () => {
-  toggleFavorite(movie);
-};
-
-
 if (!movie) {
     return <div>Loading...</div>;
 }
 
+
   return (
-    <div className="movie-details">
+    <article className="movie-details">
       <MovieHeader/>
     <div 
       className="movie-background"
@@ -47,8 +37,7 @@ if (!movie) {
       }}>
     </div>
 
-    
-       <div className="wrapper">
+    <section className="wrapper">
         <MoviePoster posterPath={movie.poster_path}/>
      <div className="movie">
       <MovieInfo 
@@ -59,12 +48,12 @@ if (!movie) {
         toggleModal={toggleModal}/>
         <ActorsList actors={actors}/>
       </div>
-    </div>
+    </section>
 
-   {/* Modal para mostrar el tráiler */}
-            {isModalOpen && <TrailerModal videoKey={videoKey} toggleModal={toggleModal}/>}
-        </div>
-    );
+     {/* Modal para mostrar el tráiler */}
+      {isModalOpen && <TrailerModal videoKey={videoKey} toggleModal={toggleModal}/>}
+    </article>
+  );
 }
 
 export default Movie;

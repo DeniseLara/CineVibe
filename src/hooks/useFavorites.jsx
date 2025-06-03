@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function useFavorites() {
+export function useFavorites() {
   const [favorites, setFavorites] = useState(() => {
     try {
       const saved = localStorage.getItem('favorites');
@@ -36,4 +36,4 @@ function useFavorites() {
   return { favorites, isFavorite, toggleFavorite };
 }
 
-export default useFavorites;
+//export default useFavorites;

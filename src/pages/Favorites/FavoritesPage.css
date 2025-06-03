@@ -4,7 +4,8 @@
 }
 
 .favorite-title {
-    font-size: 2rem;
+    /*font-size: 2rem;*/
+    font-size: var(--fs-2xl);
     font-weight: 700;
     margin-bottom: 1rem;
     text-align: center;
@@ -74,7 +75,8 @@
     border: 2px solid #ffffff; 
     padding: 0.5rem 1rem;
     border-radius: 1.5rem; 
-    font-size: 1rem;
+    /*font-size: 1rem;*/
+    font-size: var(--fs-md);
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -110,6 +112,11 @@
     text-align: center;
     color: #999;
 }
+
+.favorite-message {
+    font-size: var(--fs-base);
+}
+
 
 /** MEDIA QUERYS **/
 @media (min-width: 768px) {
@@ -149,9 +156,9 @@
        margin-top: 2rem;
     }
 
-    .favorite-message{
+    /*.favorite-message{
        font-size: 1.5rem;
-    }
+    }*/
 }
 
 

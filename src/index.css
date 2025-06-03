@@ -12,6 +12,23 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --fx-xs: clamp(0.64rem, 0.608rem + 0.16vw, 0.8rem);
+  --fs-sm: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
+  --fs-base: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  --fs-md: clamp(1.25rem, 1.1875rem + 0.3125vw, 1.5625rem);
+  --fs-lg: clamp(1.5625rem, 1.4844rem + 0.3906vw, 1.9531rem);
+  --fs-xl: clamp(1.9531rem, 1.8555rem + 0.4883vw, 2.4414rem);
+  --fs-2xl: clamp(2.4414rem, 2.3193rem + 0.6104vw, 3.0518rem);
+  --fs-3xl: clamp(3.0518rem, 2.8992rem + 0.7629vw, 3.8147rem);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  transition: all .3s ease;
 }
 
 .route{

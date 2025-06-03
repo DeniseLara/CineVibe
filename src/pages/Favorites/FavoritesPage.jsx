@@ -1,19 +1,18 @@
-import { useState, useEffect } from 'react';
 import './FavoritesPage.css';
-import useFavorites from '../custom hook/useFavorites';
+import { useFavorites } from '../../hooks/useFavorites';
 import { FaTrashAlt } from "react-icons/fa";
 
 function FavoritePage() {
     const { favorites, toggleFavorite } = useFavorites();
 
     return (
-        <div className="favorites-container">
+        <section className="favorites-container" aria-label="Favorite movies list">
             <h1 className='favorite-title'>My List</h1>
 
             {favorites.length > 0 ? (
-                <div className="favorites-list">
+                <ul className="favorites-list">
                     {favorites.map((movie) => (
-                        <div key={movie.id} className="favorite-item">
+                        <li key={movie.id} className="favorite-item">
                             <img
                                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                                 alt={`Poster of ${movie.title}`}
@@ -28,13 +27,13 @@ function FavoritePage() {
                                     <FaTrashAlt/>
                                 </button>
                             </div>
-                        </div>
+                        </li>
                     ))}
-                </div>
+                </ul>
             ) : (
                 <p className='favorite-message'>No favorite movies yet!</p>
             )}
-        </div>
+        </section>
     );
 }
 

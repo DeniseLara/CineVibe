@@ -1,23 +1,22 @@
 import './App.css'
 import { FaSun, FaMoon } from 'react-icons/fa';
 import { Link, Routes, Route, useLocation } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useDarkMode } from './hooks/useDarkMode';
 
-import HomePage from './components/Home/HomePage'
-import SearchPage from './components/Search/SearchPage'
-import FavoritePage from './components/Favorites/FavoritesPage'
-import Navbar from './components/Search/Navbar';
-import AboutPage from './components/About/AboutPage'
-import Movie from './components/Home/Movie';
-
+import HomePage from './pages/Home/HomePage'
+import SearchPage from './pages/Search/SearchPage'
+import FavoritePage from './pages/Favorites/FavoritesPage'
+import Navbar from './components/Navbar/Navbar';
+import AboutPage from './pages/About/AboutPage'
+import Movie from './pages/Home/Movie';
+import Header from './components/Header/Header';
 
 function App() {
   const location = useLocation(); // Detectar la ruta actual
 
   // Recuperar el estado del modo oscuro desde localStorage
-  const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem('darkMode') === 'true';
-  });
+  const [darkMode, setDarkMode] = useDarkMode();
 
   // Cambiar el estado de darkMode y guardarlo en localStorage
   const toggleDarkMode = () => {
@@ -37,26 +36,12 @@ function App() {
 
   return (
     <div className='app'>
-     {!isMoviePage && (
-      <nav className='nav'>
-        <Link to="/about" className='logo' title='logo'>CineVibe</Link>
-        <div className="mode-toggle">
-          {darkMode ? <FaMoon /> : <FaSun />}
-          <label className="switch">
-            <input type="checkbox" 
-            onChange={toggleDarkMode} 
-            checked={darkMode}
-            aria-label="Toggle dark mode" 
-            />
-            <span className="slider"></span>
-          </label>
-        </div>
-        </nav>
-              )}
+     {!isMoviePage && <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>}
+      
 
       <Navbar/>
 
-      <div className='path'>
+      <main className='path'>
     <Routes>
       <Route path='/' element={<HomePage/>}/>
       <Route path='/search' element={<SearchPage/>}/>
@@ -64,7 +49,7 @@ function App() {
       <Route path='/about' element={<AboutPage/>}/>
       <Route path='/movie/:movieId' element={<Movie/>}/>
     </Routes>
-    </div>
+    </main>
     </div>
   )
 }
