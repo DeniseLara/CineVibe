@@ -1,12 +1,8 @@
 .search-form{
-    /*display: flex;*/
-    /*padding-left: 0.5rem;*/
     border-radius: 2rem;
-    width: 100%;
     transition: all .3s ease-in-out;
-    /*justify-content: center;
-    gap: 0.5rem;*/
     position: relative;
+    margin: 0 auto;
 }
 
 .visually-hidden {
@@ -20,15 +16,6 @@
   white-space: nowrap;
   border: 0;
 }
-
-/*.search-bar {
-    display: flex;
-    max-width: 100%;
-    align-items: center;    
-    background-color: rgba(255, 255, 255, 0.377);
-    border-radius: 2rem;
-    box-shadow: 0px 4px 10px rgba(235, 222, 222, 0.121);
-}*/
   
 .search-input {
     background: transparent;
@@ -37,17 +24,16 @@
     border-radius: 2rem;
     outline: none;
     transition: all .3s ease-in-out;
-    /*font-size: clamp(1rem, 2vw, 1.2rem);*/
     font-size: var(--fs-base);
     color: #fff;
     width: 100%;
+    max-width: 100%;
     padding: 0.7rem 2.8rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
   
 .search-input::placeholder {
     font-size: var(--fs-sm);
-    /*padding: 0.7rem 1.5rem;*/
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -57,15 +43,10 @@
 }
 
 .search-button {
-    /*background: linear-gradient(135deg, #ff3d00, #ff7300);*/
     border: none;
-    /*font-size: var(--fs-sm);*/
     outline: none;
-    /*padding: 0.5rem 0.6rem;*/
     background-color: transparent;
-    /*padding: 0.5rem 0.8rem;*/
     color: rgba(255, 255, 255, 0.8);
-    /*border-radius: 2rem;*/
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
@@ -78,12 +59,9 @@
     padding: 0.7rem 0.8rem;
     background-color: transparent;
     position: absolute;
-    /*padding: 0.5rem 0.8rem;*/
     color: rgba(255, 255, 255, 0.8);
-    /*border-radius: 2rem;*/
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    /*font-size: 1.4rem;*/
     font-size: var(--fs-md);
 }
 
@@ -93,24 +71,12 @@
     background-color: transparent;
 }
   
-.search-button:hover {
-    /*background: linear-gradient(135deg, #ff7300, #ff3d00);*/
-    /*transform: scale(1.1);*/
-}
-
 
 /** MEDIA QUERYS **/
-@media (min-width:1024px){
+@media (min-width:768px){
     .search-form{
-      max-width: 80%;
-     }
-
-     /*.search-button{
-      padding: 0.5rem 1rem;
-     }*/
-
-    /*.search-icon{
-      font-size: 1.5rem;
-    }*/
+      width: 90%;
+      
+    }
 }
   

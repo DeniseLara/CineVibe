@@ -7,7 +7,7 @@ function FavoritePage() {
 
     return (
         <section className="favorites-container" aria-label="Favorite movies list">
-            <h1 className='favorite-title'>My List</h1>
+            <h1 className='favorite-title'>My list</h1>
 
             {favorites.length > 0 ? (
                 <ul className="favorites-list">

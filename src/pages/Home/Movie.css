@@ -20,7 +20,6 @@
     z-index: -1; 
 }
 
-/* Oscurece el fondo para mejor contraste */
 .movie-background::before {
     content: "";
     position: absolute;
@@ -32,7 +31,6 @@
 .back-arrow-link {
     display: inline-flex;
     align-items: center;
-    /*font-size: 2rem;*/
     font-size: var(--fs-xl);
     color: #fff;
     text-decoration: none;
@@ -67,10 +65,8 @@
 
 /* Sección de imagen */
 .movie-player {
-    /*width: 80%;
-    max-width: 40rem;*/
-    width: clamp(12.5rem, 25vw, 22rem); /* de 200px a 352px aprox */
-    aspect-ratio: 2 / 3; /* Mantiene proporción 2:3 típica de pósters */
+    width: clamp(12.5rem, 25vw, 22rem); 
+    aspect-ratio: 2 / 3;
     margin: 0 auto;
 }
 
@@ -80,7 +76,6 @@
 
 .movie-save {
     cursor: pointer;
-    /*font-size: 2rem;*/
     font-size: var(--fs-lg);
     background-color: transparent;
     padding: 0;
@@ -95,10 +90,6 @@
     outline: none;
     padding: 0;
 }
-
-/*.movie-save:hover {
-    transform: scale(1.1);
-}*/
 
 .save-icon {
     color: #ffffff;
@@ -131,33 +122,24 @@
     flex: 1;
 }
 
-/*.movie-save{
-    font-size: 1.8rem;
-}*/
-
 .movie-text {
     font-size: var(--fs-base);
-    /*text-align: center;*/
     position: relative;
 }
 
 .movie-title {
-    /*font-size: clamp(1.5rem, 4vw, 2.5rem);*/
     font-size: var(--fs-xl);
-    /*text-align: center;*/
     font-weight: 500;
     color: #fff;
 }
 
 .movie-rating {
-    /*font-size: clamp(1rem, 2.5vw, 1.5rem);*/
     font-size: var(--fs-sm);
     color: #ffcc00;
     font-weight: bold;
 }
 
 .movie-overview {
-    /*font-size: clamp(0.9rem, 2vw, 1.2rem);*/
     font-size: var(--fs-base);
     color: #ccc;
     text-align: start;
@@ -165,12 +147,10 @@
     margin: 1rem 0;
 }
 
-/* Botón Watch Now */
 .movie-button {
     display: inline-flex;
     background: linear-gradient(135deg, #ff3d00, #ff7300);
     color: #ffffff;
-    /*font-size: 1rem;*/
     font-size: var(--fs-sm);
     font-weight: bold;
     padding: 0.8rem 1.2rem;
@@ -205,9 +185,7 @@
     transform: scale(0.95);
 }
 
-/* Actores */
 .movie-actors {
-    /*font-size: clamp(1.2rem, 3vw, 1.6rem);*/
     font-size: var(--fs-lg);
     font-weight: bold;
     margin-bottom: 0.5rem;
@@ -222,11 +200,9 @@
     flex-wrap: wrap;
     gap: 0.5rem;
     color: #ffffff;
-    /*justify-content: center;*/
 }
 
 .movie-actors-list .movie-actor {
-    /*font-size: clamp(1rem, 2vw, 1.3rem);*/
     font-size: var(--fs-base);
     background: rgba(255, 255, 255, 0.1);
     padding: 0.5rem 1rem;
@@ -238,7 +214,6 @@
     opacity: 0.5;
 }
 
-/* Estilos para el fondo del modal */
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -284,7 +259,6 @@
     opacity: 1;
 }
 
-/* Botón de cerrar */
 .close-modal {
     position: absolute;
     top: 0.3rem;
@@ -293,7 +267,6 @@
     border: none;
     padding: 0;
     outline: none;
-    /*font-size: 2rem;*/
     font-size: var(--fs-xl);
     color: #ffffff;
     cursor: pointer;
@@ -312,7 +285,6 @@
 /* Contenedor del video */
 .modal-video-container {
     width: 100%;
-    /*aspect-ratio: 12 / 6;*/
     aspect-ratio: 16 / 9;
     border-radius: 0.8rem;
     overflow: hidden;
@@ -331,7 +303,6 @@
 }
 
 .movie-principal{
-    /*flex-direction: column;*/
     justify-content: space-between;
     align-items: center;
 }
@@ -361,10 +332,6 @@
         align-items: flex-start;
     }
 
-    /*.movie-player {
-        max-width: 50%;
-    }*/
-
     .movie-text {
         text-align: left;
     }
@@ -376,10 +343,6 @@
     .modal-content {
         width: 50%;
     }
-
-    /*.movie-save{
-        font-size: 2.2rem;
-    }*/
 
    .movie-background {
     position: absolute;
@@ -393,14 +356,13 @@
     z-index: -1;
     }
 
-/* Oscurece el fondo para mejor contraste */
-.movie-background::before {
+    .movie-background::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6); 
-}
+    }
 
     .movie {
         display: flex;
@@ -422,10 +384,6 @@
         padding-bottom: 0; 
     }
 
-    /*.movie-player {
-        max-width: 40%;
-    }*/
-
     .movie-text {
         text-align: left;
     }
@@ -433,14 +391,6 @@
     .movie-actors-list {
         justify-content: flex-start;
     }
-
-    /*.movie-actors-list li {
-        font-size: clamp(1rem, 2vw, 1.1rem);
-    }*/
-
-    /*.movie-overview {
-        font-size: clamp(0.9rem, 2vw, 1.2rem);
-    }*/
 }
 
 

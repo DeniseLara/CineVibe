@@ -40,7 +40,6 @@
 }
 
 .movie-slide {
-  /*flex: 0 0 auto;*/
   flex-shrink: 0;
   max-width: 45%;
   width: 100%;
@@ -58,18 +57,16 @@
   transition: all 0.3s ease;
 }
 
-/*efecto de hover*/
 .movie-slide:hover .movie-poster{
   transform: scale(1.05);
   opacity: 0.4;
 }
 
-/* Mostrar el overlay al hacer hover */
- .movie-slide:hover::before {
+.movie-slide:hover::before {
   opacity: 1; 
- }
+}
 
- .movie-slide .play-button {
+.movie-slide .play-button {
   position: absolute;
   top: 80%;
   left: 50%;
@@ -82,7 +79,6 @@
   border: none;
   width: 70%;
   text-align: center;
-  /*max-width: 100%;*/
   display: inline-flex;
   justify-content: center;
   border-radius: 0.3rem;
@@ -97,10 +93,9 @@
   color: #CCCCCC;
 }
 
-/* Mostrar el botón al hacer hover */
 .movie-slide:hover .play-button {
  opacity: 1; 
- }
+}
 
 .category-title{
   font-weight: 500;

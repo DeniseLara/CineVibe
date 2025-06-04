@@ -11,7 +11,7 @@
 .light .search-input{
   border: 1px solid rgba(0, 0, 0, 0.15);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  color: #333333; /* Color gris oscuro para texto */
+  color: #333333; 
 }
 
 .light .search-icon {
@@ -19,7 +19,7 @@
 }
 
 .light .navbar-link.active{
-  color: #FFC107; /* Color dorado brillante al hacer hover */
+  color: #FFC107; 
 }
 
 .light  .search-input::placeholder {
@@ -27,7 +27,7 @@
 }
 
 .light .movie-background{
-  filter: blur(4px);  /* Aplica desenfoque */
+  filter: blur(4px);  
 
 }
 
@@ -41,9 +41,9 @@
 }
 
 .light .navbar-link{
-  color: #333333; /* Color gris oscuro para texto */
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  transition: all .3s ease; /* Transición suave */
+  color: #333333; 
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  transition: all .3s ease; 
 }
 
 .light .logo{
@@ -51,11 +51,11 @@
 }
 
 .light .movie-poster{
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra elegante pero notable */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(0, 0, 0, 0.15); 
 }
 
 .light .movie-poster:hover{
-  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1), 0 20px 30px rgba(0, 0, 0, 0.05); /* Sombra más intensa al hover */
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1), 0 20px 30px rgba(0, 0, 0, 0.05); 
 }
 
 .light .navbar-logo{
@@ -63,8 +63,8 @@
 }
 
 .light .navbar-link:hover {
-  color: #FFC107; /* Color dorado brillante al hacer hover */
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada en hover */
+  color: #FFC107; 
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .light .about-description{
@@ -177,7 +177,6 @@ transform: translateX(14px);
 
 /** MEDIA QUERYS **/
 @media (min-width:1024px) and (max-height:900px){
- 
  .logo{
   display: none;
  }
@@ -187,7 +186,6 @@ transform: translateX(14px);
   right: 1rem;
   top: 1rem;
  }
-
 }
 
 

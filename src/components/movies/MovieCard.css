@@ -6,7 +6,6 @@
     minmax(150px, 1fr)
   );
   position: relative;
-  /*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);*/
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   gap: 1rem;
@@ -14,8 +13,6 @@
 
 .movie-card {
   position: relative;
-  /*max-width: 100%;
-  width: 100%;*/
   display: grid;
   aspect-ratio: 2 / 3;
   border-radius: 1rem;
@@ -33,7 +30,6 @@
   transition: all 0.3s ease;
 }
 
-/* Efecto hover: agrandar imagen y desenfoque */
 .movie-card:hover .movie-image {
   transform: scale(1.05);
   opacity: 0.6;
@@ -89,13 +85,11 @@
   color: #ffcc00;
 }
 
-/* Ícono de la estrella */
 .movies-rating svg {
   font-size: 1.5rem;
   color: #ffcc00;
 }
 
-/* Hover en la tarjeta para agrandar */
 .movie-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
