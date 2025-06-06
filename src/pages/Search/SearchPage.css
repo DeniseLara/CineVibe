@@ -53,8 +53,8 @@ body{
 }
 
 
-@media (min-width:1024px) and (max-height:1100px){
-  .search-page{
+@media (min-width:1024px) and (max-height:800px){
+    .search-page{
     margin-left: 44vh;
     margin-top: 2rem;
     padding: 0 1rem calc(2rem + 3rem); 
