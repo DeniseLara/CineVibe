@@ -72,6 +72,8 @@
 
 .movie-principal{
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .movie-save {
@@ -136,7 +138,21 @@
 .movie-rating {
     font-size: var(--fs-sm);
     color: #ffcc00;
+    align-items: center;
+    display: flex;
+    gap: 0.8rem;
     font-weight: bold;
+}
+
+.sr-only{
+    font-size: var(--fs-md);
+    color: #ccc;
+}
+
+.star-rating{
+    display: flex;
+    gap: 0.4rem;
+    font-size: var(--fs-md);
 }
 
 .movie-overview {
@@ -205,13 +221,14 @@
 .movie-actors-list .movie-actor {
     font-size: var(--fs-base);
     background: rgba(255, 255, 255, 0.1);
+    border: 1.2px solid rgba(255, 255, 255, 0.1);
     padding: 0.5rem 1rem;
-    border-radius: 0.8rem;
+    border-radius: 2rem;
     transition: all .3s ease;
 }
 
 .movie-actor:hover{
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .modal-overlay {
@@ -237,7 +254,6 @@
 
 /* Contenedor del modal */
 .modal-content {
-    position: relative;
     width: 90%;
     max-width: 50rem;
     background: #1c1c1e;
@@ -302,10 +318,6 @@
     border-radius: inherit;
 }
 
-.movie-principal{
-    justify-content: space-between;
-    align-items: center;
-}
 
 
 /** MEDIA QUERYS **/

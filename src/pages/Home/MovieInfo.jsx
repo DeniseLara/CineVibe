@@ -1,5 +1,6 @@
 import { BsBookmark, BsBookmarkFill } from "react-icons/bs";
 import { FaPlay } from "react-icons/fa6";
+import StarRating from './StarRating'
 
 function MovieInfo({ movie, isFavorite, toggleFavorite, videoKey, toggleModal }) {
 
@@ -9,8 +10,10 @@ function MovieInfo({ movie, isFavorite, toggleFavorite, videoKey, toggleModal })
 
 
       <div className="movie-principal">
-      <p className="movie-rating">Rating: {movie.vote_average}</p>
-
+        <div className="movie-rating">
+          <StarRating rating={movie.vote_average} />
+          <span className="sr-only"> {movie.vote_average}</span>
+        </div>
        <button 
         className='movie-save'
         type="button" 
