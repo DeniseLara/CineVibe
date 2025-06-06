@@ -66,6 +66,14 @@
 
 
 /** MEDIA QUERYS **/
+/* Solo aplica extra padding si hay área segura */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .navbar {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+
 @media (min-width:768px){
   .navbar-link{
     font-size: 2rem;
