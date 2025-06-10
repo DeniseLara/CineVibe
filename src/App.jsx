@@ -6,10 +6,10 @@ import { useDarkMode } from './hooks/useDarkMode';
 import HomePage from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
 import FavoritePage from './pages/FavoritesPage';
-import Navbar from './components/navbar__/Navbar';
+import Navbar from './components/navbar/Navbar';
 import AboutPage from './pages/AboutPage';
 import Movie from './pages/MovieDetails';
-import Header from './components/header__/Header';
+import Header from './components/header/Header';
 
 function App() {
   const location = useLocation(); // Detectar la ruta actual
