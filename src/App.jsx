@@ -9,7 +9,7 @@ import FavoritePage from './pages/FavoritesPage';
 import Navbar from './components/Navbar/Navbar';
 import AboutPage from './pages/AboutPage';
 import Movie from './pages/MovieDetails';
-import Header from './components/header/Header';
+import Header from './components/Header/Header';
 
 function App() {
   const location = useLocation(); // Detectar la ruta actual
