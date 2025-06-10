@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 
 import { searchMovies } from '../services/api'; 
 
-import SearchBar from '../components/Search/SearchBar';
+import SearchBar from '../components/search/SearchBar';
 import MovieCard from '../components/movies/MovieCard';
 
 

@@ -1,5 +1,7 @@
+import './Movie.css';
 import { useState } from 'react';
 import { useParams } from "react-router-dom";
+
 import { useMovieDetails } from '../hooks/useMovieDetails';
 import { useFavorites } from '../hooks/useFavorites';
 
@@ -7,9 +9,8 @@ import MovieHeader from '../components/moviedetails/MovieHeader';
 import MovieInfo from '../components/moviedetails/MovieInfo';
 import MoviePoster from '../components/moviedetails/MoviePoster';
 import TrailerModal from '../components/moviedetails/TrailerModal';
-
-import './Movie.css';
 import ActorsList from '../components/moviedetails/ActorsList';
+
 
 function Movie() {
   const { movieId } = useParams();
