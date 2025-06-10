@@ -3,12 +3,12 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 
 import { useDarkMode } from './hooks/useDarkMode';
 
-import HomePage from './pages/HomePage'
-import SearchPage from './pages/SearchPage'
-import FavoritePage from './pages/FavoritesPage'
+import HomePage from './pages/HomePage';
+import SearchPage from './pages/SearchPage';
+import FavoritePage from './pages/FavoritesPage';
 import Navbar from './components/navbar/Navbar';
-import AboutPage from './pages/AboutPage'
-import MovieDetails from './pages/MovieDetails'
+import AboutPage from './pages/AboutPage';
+import Movie from './pages/MovieDetails';
 import Header from './components/header/Header';
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
       <Route path='/search' element={<SearchPage/>}/>
       <Route path='/favorites' element={<FavoritePage/>}/>
       <Route path='/about' element={<AboutPage/>}/>
-      <Route path='/movie/:movieId' element={<MovieDetails/>}/>
+      <Route path='/movie/:movieId' element={<Movie/>}/>
     </Routes>
     </main>
     </div>
