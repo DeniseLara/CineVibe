@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { useParams } from "react-router-dom";
-import { useMovieDetails } from './useMovieDetails';
-import { useFavorites } from '../../hooks/useFavorites';
+import { useMovieDetails } from '../hooks/useMovieDetails';
+import { useFavorites } from '../hooks/useFavorites';
 
-import MovieHeader from './MovieHeader';
-import MovieInfo from './MovieInfo';
-import MoviePoster from './MoviePoster';
-import TrailerModal from './TrailerModal';
+import MovieHeader from '../components/moviedetails/MovieHeader';
+import MovieInfo from '../components/moviedetails/MovieInfo';
+import MoviePoster from '../components/moviedetails/MoviePoster';
+import TrailerModal from '../components/moviedetails/TrailerModal';
 
 import './Movie.css';
-import ActorsList from './ActorsList';
+import ActorsList from '../components/moviedetails/ActorsList';
 
 function Movie() {
   const { movieId } = useParams();

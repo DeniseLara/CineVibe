@@ -1,5 +1,5 @@
 import './FavoritesPage.css';
-import { useFavorites } from '../../hooks/useFavorites';
+import { useFavorites } from '../hooks/useFavorites';
 import { FaTrashAlt } from "react-icons/fa";
 
 function FavoritePage() {

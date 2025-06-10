@@ -1,9 +1,8 @@
+import './Navbar.css'
 import { IoHomeSharp, IoSearchSharp } from "react-icons/io5";
 import { MdFavorite } from "react-icons/md";
 import { BiInfoCircle } from "react-icons/bi";
-import { Link, useLocation } from 'react-router-dom'; // Importa Link de React Router DOM
-import './Navbar.css'
-
+import { Link, useLocation } from 'react-router-dom'; 
 
 function Navbar(){
     const location = useLocation(); // Obtener la ubicación actual de la URL

@@ -1,7 +1,7 @@
 import { FaSun, FaMoon } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-export default function Header({ darkMode, toggleDarkMode }) {
+function Header({ darkMode, toggleDarkMode }) {
   return (
     <nav className='nav'>
       <Link to="/about" className='logo' title='logo'>CineVibe</Link>
@@ -20,3 +20,5 @@ export default function Header({ darkMode, toggleDarkMode }) {
     </nav>
   );
 }
+
+export default Header;

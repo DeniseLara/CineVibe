@@ -1,13 +1,15 @@
+import './HomePage.css';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import {
   fetchTrendingMovies,
   fetchPopularMovies,
   fetchComedyMovies,
   fetchRomanceMovies,
   fetchSeries,
-} from '../../services/api';
-import './HomePage.css';
-import { Link } from 'react-router-dom';
+} from '../services/api';
+
 
 function HomePage() {
   const [isLoading, setIsLoading] = useState(true);

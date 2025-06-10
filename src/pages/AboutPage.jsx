@@ -1,5 +1,4 @@
 import './AboutPage.css';
-
 import { FaReact, FaCss3 } from "react-icons/fa";
 import { BiNetworkChart } from "react-icons/bi";
 import { IoLogoJavascript } from "react-icons/io";

@@ -1,9 +1,9 @@
-import { useState } from 'react';
 import './SearchBar.css';
+import { useState } from 'react';
 import { IoSearch } from "react-icons/io5";
 
 
-function SearchBar({ onSearch }) {  // Aquí recibimos la prop onSearch
+function SearchBar({ onSearch }) {  
     const [query, setQuery] = useState('');
 
     const handleSubmit = (e) => {

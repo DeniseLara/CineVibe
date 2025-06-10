@@ -1,5 +1,5 @@
-import { IoCloseOutline } from "react-icons/io5";
 import ReactPlayer from 'react-player';
+import { IoCloseOutline } from "react-icons/io5";
 
 function TrailerModal({ videoKey, toggleModal }) {
   return (

@@ -1,6 +1,8 @@
 import { BsBookmark, BsBookmarkFill } from "react-icons/bs";
 import { FaPlay } from "react-icons/fa6";
+
 import StarRating from './StarRating'
+
 
 function MovieInfo({ movie, isFavorite, toggleFavorite, videoKey, toggleModal }) {
 

@@ -1,8 +1,10 @@
-import { useState, useRef } from 'react';
-import SearchBar from './SearchBar';
-import MovieCard from '../../components/movies/MovieCard';
 import './SearchPage.css';
-import { searchMovies } from '../../services/api';  // Importa la función de búsqueda
+import { useState, useRef } from 'react';
+
+import { searchMovies } from '../services/api'; 
+
+import SearchBar from '../components/Search/SearchBar';
+import MovieCard from '../components/movies/MovieCard';
 
 
 function SearchPage() {
