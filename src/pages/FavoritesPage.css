@@ -113,7 +113,7 @@
 }
 
 
-/** MEDIA QUERYS **/
+
 @media (min-width: 768px) {
     .favorites-list {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
@@ -132,16 +132,12 @@
     }
 }
 
+
 @media (min-width: 1024px) and (min-height:1100px){
     .favorites-list {
         padding: 1rem 0rem;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     }
-
-    /*.favorites-container{
-        margin-left: 44vh;
-        padding: 0 1% 3rem;
-    }*/
 
     .favorite-title{
         text-align: start;

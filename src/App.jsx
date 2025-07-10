@@ -21,7 +21,7 @@ function App() {
     <div className='app'>
      {!isMoviePage && <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>}
       
-      <Navbar/>
+    <Navbar/>
 
     <main className='path'>
     <Routes>

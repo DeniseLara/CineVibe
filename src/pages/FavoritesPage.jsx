@@ -1,6 +1,6 @@
 import './FavoritesPage.css';
-import { useFavorites } from '../hooks/useFavorites';
 import { FaTrashAlt } from "react-icons/fa";
+import { useFavorites } from '../hooks/useFavorites';
 
 function FavoritePage() {
     const { favorites, toggleFavorite } = useFavorites();
