@@ -25,7 +25,7 @@
     outline: none;
     transition: all .3s ease-in-out;
     font-size: var(--fs-base);
-    color: #fff;
+    color: var(--color-white);
     width: 100%;
     max-width: 100%;
     padding: 0.7rem 2.8rem;
@@ -75,8 +75,7 @@
 /** MEDIA QUERYS **/
 @media (min-width:768px){
     .search-form{
-      width: 90%;
-      
+      width: 90%; 
     }
 }
   

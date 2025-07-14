@@ -1,6 +1,6 @@
 /* MODO CLARO */
 .light {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   color: #121212;
 }
 
@@ -28,7 +28,6 @@
 
 .light .movie-background{
   filter: blur(4px);  
-
 }
 
 .light .movie-card:hover .movie-image {
@@ -96,7 +95,7 @@
 /* Modo Oscuro */
 .dark {
   background-color: #121212;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 /*mobile*/
@@ -130,48 +129,48 @@
 }
 
 .switch {
-position: relative;
-display: inline-block;
-width: 2.2rem;
-height: 1.3rem;
+  position: relative;
+  display: inline-block;
+  width: 2.2rem;
+  height: 1.3rem;
 }
 
 .switch input {
-opacity: 0;
-width: 0;
-height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
-position: absolute;
-cursor: pointer;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: #ccc;
-transition: .4s;
-border-radius: 1rem;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 1rem;
 }
 
 .slider:before {
-position: absolute;
-content: "";
-height: 0.8rem;
-width: 0.8rem;
-border-radius: 50%;
-left: 0.25rem;
-bottom: 0.25rem;
-background-color: white;
-transition: .4s;
+  position: absolute;
+  content: "";
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 50%;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  background-color: white;
+  transition: .4s;
 }
 
 input:checked + .slider {
-background-color: #2272FF;
+  background-color: #2272FF;
 }
 
 input:checked + .slider:before {
-transform: translateX(14px);
+  transform: translateX(14px);
 }
 
 

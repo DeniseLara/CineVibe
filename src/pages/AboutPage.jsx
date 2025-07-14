@@ -22,39 +22,52 @@ function AboutPage() {
         <h2 className="about-subtitle tech">Technologies Used</h2>
         <ul className="tech-cards">
           <li className="tech-card">
-            <FaReact className="tech-icon react" aria-label="React logo"/>
+            <FaReact 
+            className="tech-icon react"
+            aria-label="React logo"
+            />
             <h3 className='tech-title'>React</h3>
-            <p  className='tech-description'>Frontend and interactive components.</p>
+            <p className='tech-description'>Frontend and interactive components.</p>
           </li>
 
           <li className="tech-card">
-            <FaCss3 className="tech-icon css" aria-label="CSS logo"/>
+            <FaCss3 
+            className="tech-icon css"
+            aria-label="CSS logo"/>
             <h3 className='tech-title'>CSS</h3>
-            <p  className='tech-description'>Responsive design and layout.</p>
+            <p className='tech-description'>Responsive design and layout.</p>
           </li>
 
           <li className="tech-card">
-            <BiNetworkChart className="tech-icon api" aria-label="APIs icon"/>
+            <BiNetworkChart 
+            className="tech-icon api"
+            aria-label="APIs icon"/>
             <h3 className='tech-title'>APIs</h3>
             <p className='tech-description'>Real-time data consumption.</p>
           </li>
 
           <li className="tech-card">
-            <TbRoute className="tech-icon router" aria-label="React router icon"/>
+            <TbRoute 
+            className="tech-icon router"
+            aria-label="React router icon"/>
             <h3 className='tech-title'>React Router</h3>
-            <p  className='tech-description'>Page navigation.</p>
+            <p className='tech-description'>Page navigation.</p>
           </li>
 
           <li className="tech-card">
-            <IoLogoJavascript className="tech-icon js" aria-label="JavaScript logo"/>
+            <IoLogoJavascript 
+            className="tech-icon js"
+            aria-label="JavaScript logo"/>
             <h3 className='tech-title'>JavaScript</h3>
-            <p  className='tech-description'>Modern and optimized functions.</p>
+            <p className='tech-description'>Modern and optimized functions.</p>
           </li>
 
           <li className="tech-card">
-            <TbBrandVite className="tech-icon js" aria-label="Vite logo"/>
+            <TbBrandVite 
+            className="tech-icon js"
+            aria-label="Vite logo"/>
             <h3 className='tech-title'>Vite</h3>
-            <p  className='tech-description'>Development and production performance optimization.</p>
+            <p className='tech-description'>Development and production performance optimization.</p>
           </li>
         </ul>
       </section>

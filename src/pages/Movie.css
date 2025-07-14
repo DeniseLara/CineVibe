@@ -32,7 +32,7 @@
     display: inline-flex;
     align-items: center;
     font-size: var(--fs-xl);
-    color: #fff;
+    color: var(--color-white);
     text-decoration: none;
     margin-bottom: 1rem;
 }
@@ -49,7 +49,7 @@
 }
 
 .back-arrow:hover {
-    color: #FFFFFF;
+    color: var(--color-white);
     transform: translateX(0.5rem);
     background: rgba(255, 255, 255, 0.4);
 }
@@ -94,7 +94,7 @@
 }
 
 .save-icon {
-    color: #ffffff;
+    color: var(--color-white);
     font-size: inherit;
     transition: color 0.4s ease, transform .4s ease;
 }
@@ -132,7 +132,7 @@
 .movie-title {
     font-size: var(--fs-xl);
     font-weight: 500;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .movie-rating {
@@ -146,7 +146,7 @@
 
 .sr-only{
     font-size: var(--fs-md);
-    color: #ccc;
+    color: var(--gray-light);
 }
 
 .star-rating{
@@ -157,7 +157,7 @@
 
 .movie-overview {
     font-size: var(--fs-base);
-    color: #ccc;
+    color: var(--gray-light);
     text-align: start;
     line-height: 1.6;
     margin: 1rem 0;
@@ -166,7 +166,7 @@
 .movie-button {
     display: inline-flex;
     background: linear-gradient(135deg, #ff3d00, #ff7300);
-    color: #ffffff;
+    color: var(--color-white);
     font-size: var(--fs-sm);
     font-weight: bold;
     padding: 0.8rem 1.2rem;
@@ -206,7 +206,7 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
     margin-top: 1.5rem;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .movie-actors-list {
@@ -215,7 +215,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    color: #ffffff;
+    color: var(--color-white);
 }
 
 .movie-actors-list .movie-actor {
@@ -284,7 +284,7 @@
     padding: 0;
     outline: none;
     font-size: var(--fs-xl);
-    color: #ffffff;
+    color: var(--color-white);
     cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -356,23 +356,23 @@
     }
 
    .movie-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-repeat: no-repeat;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    filter: blur(10px);  
-    z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: blur(10px);  
+        z-index: -1;
     }
 
     .movie-background::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); 
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6); 
     }
 
     .movie {

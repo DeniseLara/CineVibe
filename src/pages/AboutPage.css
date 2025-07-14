@@ -20,7 +20,7 @@
 }
 
 .about-description {
-  color: rgba(255, 255, 255, 0.85); 
+  color: var(--gray-light); 
   font-size: var(--fs-base);
   line-height: 1.6;
   opacity: 0.9;
@@ -36,7 +36,6 @@
 }
 
 .tech-card {
-  /*background: rgba(255, 255, 255, 0.1);*/
   background: rgba(255, 255, 255, 0.05);
   border-radius: 1rem;
   padding: 2rem;
@@ -57,10 +56,6 @@
 
 .tech-card:hover {
   transform: translateY(-0.3rem);
-  /*box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);*/
-  /*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-  background: rgba(255, 255, 255, 0.08);
-  background: linear-gradient(135deg, rgba(0, 153, 255, 0.3), rgba(255, 69, 0, 0.3));*/
   background: linear-gradient(
     135deg,
     rgba(0, 123, 255, 0.12),

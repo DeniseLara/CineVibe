@@ -48,7 +48,7 @@
 }
 
 .navbar-link.active{
-  color: #fff; 
+  color: var(--color-white); 
 }
 
 .navbar-link:active{
@@ -57,7 +57,7 @@
 }
 
 .navbar-link:hover {
-  color: #fff; 
+  color: var(--color-white); 
 }
 
 .navbar-description{
@@ -117,7 +117,7 @@
   }
   
   .navbar-link:hover span {
-    color: #FFFFFF; 
+    color: var(--color-white); 
   }
 
   .navbar-description{
@@ -161,7 +161,7 @@
 
 
 @media (min-width:1025px){
-    .navbar {
+  .navbar {
     top: 0;
     display: flex;
     padding-left: 4rem;
@@ -204,7 +204,7 @@
   }
   
   .navbar-link:hover span {
-    color: #FFFFFF; 
+    color: var(--color-white); 
   }
 
   .navbar-description{
