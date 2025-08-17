@@ -1,7 +1,7 @@
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 const BASE_URL = 'https://api.themoviedb.org/3';
 
-// Función genérica para validar y devolver JSON
+// Función para validar y devolver JSON
 const fetchJson = async (url) => {
   const response = await fetch(url);
   if (!response.ok) {
@@ -10,27 +10,32 @@ const fetchJson = async (url) => {
   return response.json();
 };
 
-// Función genérica para hacer peticiones a la API
+
+// Función para hacer peticiones a la API
 const fetchData = async (endpoint, queryParams = '') => {
   const url = `${BASE_URL}${endpoint}?api_key=${API_KEY}${queryParams ? `&${queryParams}` : ''}`;
   const data = await fetchJson(url);
   return data.results || [];
 };
 
-// Nueva función para buscar películas
+
+// Función para buscar películas
 export const searchMovies = async (query) => {
   return fetchData('/search/movie', `query=${encodeURIComponent(query)}`);
 };
+
 
 // Función para obtener detalles de una película
 export const getMovieDetails = async (movieId) => {
   return fetchJson(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`);
 };
 
+
 // Función para obtener los créditos (actores) de una película
 export const getMovieCredits = async (movieId) => {
   return fetchJson(`${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}`);
 };
+
 
 // Función para obtener los videos de una película
 export const getMovieVideos = async (movieId) => {
@@ -52,7 +57,7 @@ export const getMovieVideos = async (movieId) => {
       const testUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${video.key}&format=json`;
       const testResponse = await fetch(testUrl);
       if (testResponse.ok) {
-        return video.key; // Retorna el primer video que sí funcione
+        return video.key; 
       }
     } catch (error) {
     }
@@ -67,20 +72,24 @@ export const fetchTrendingMovies = async () => {
   return fetchData('/trending/movie/day');
 };
 
+
 // Obtener películas populares
 export const fetchPopularMovies = async () => {
   return fetchData('/movie/popular');
 };
+
 
 // Obtener películas de comedia (género ID: 35)
 export const fetchComedyMovies = async () => {
   return fetchData('/discover/movie', 'with_genres=35');
 };
 
+
 // Obtener películas románticas (género ID: 10749)
 export const fetchRomanceMovies = async () => {
   return fetchData('/discover/movie', 'with_genres=10749');
 };
+
 
 // Obtener series populares
 export const fetchSeries = async () => {

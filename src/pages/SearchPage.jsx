@@ -13,7 +13,7 @@ function SearchPage() {
     const [errorMessage, setErrorMessage] = useState('');
     const abortControllerRef = useRef(null);
     
-     // Ref para el contenedor de mensajes de resultados para manejar foco
+    // Ref para el contenedor de mensajes de resultados para manejar foco
     const resultsRef = useRef(null);
     const errorRef = useRef(null);
 
@@ -39,8 +39,6 @@ function SearchPage() {
             const results = await searchMovies(query, { signal: abortControllerRef.current.signal });
             setSearchResults(results);
             setStatus('success');
-            // Mover foco al contenedor de resultados después de búsqueda exitosa
-            //setTimeout(() => resultsRef.current?.focus(), 0);
             } catch (error) {
             if (error.name === 'AbortError') {
             return;
@@ -94,8 +92,12 @@ function SearchPage() {
 
                 {status === 'idle' && (
                     <div className="no-search-yet">
-                        <h2 className="no-search-message">¡Search for your favorite movies!</h2>
-                        <p className="instructions">Enter a movie name in the search bar to get started.</p>
+                        <h2 className="no-search-message">
+                            ¡Search for your favorite movies!
+                        </h2>
+                        <p className="instructions">
+                            Enter a movie name in the search bar to get started.
+                        </p>
                     </div>
                 )}
             </section>

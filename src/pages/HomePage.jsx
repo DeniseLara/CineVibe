@@ -52,13 +52,20 @@ function HomePage() {
 
   return (
     <div className="home-container">
-      <h1 className="home-title">Discover, save, and enjoy your favorite movies</h1>
+      <h1 className="home-title">
+        Discover, save, and enjoy your favorite movies
+      </h1>
 
       {isLoading ? (
         <p className="loading">Loading...</p>  
       ) : (
       categories.map((category) => (
-        <section key={category.id} className="category" role="region" aria-label={`${category.title} movies`}>
+        <section 
+          key={category.id} 
+          className="category" 
+          role="region" 
+          aria-label={`${category.title} movies`}
+        >
           <h2 className="category-title">{category.title}</h2>
           <ul className="movie-slider">
             {moviesByCategory[category.id].map((movie) => (
@@ -68,8 +75,9 @@ function HomePage() {
                   alt={movie.title || movie.name}
                   className="movie-poster"
                 />
-                {/* Botón "Ver ahora" */}
-                <Link to={`/movie/${movie.id}`} className="play-button">View Details</Link>
+                <Link to={`/movie/${movie.id}`} className="play-button">
+                  View Details
+                </Link>
               </li>
             ))}
           </ul>

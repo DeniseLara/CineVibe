@@ -31,27 +31,27 @@ if (!movie) {
   return (
     <article className="movie-details">
       <MovieHeader/>
-    <div 
-      className="movie-background"
-      style={{
-       backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path || movie.poster_path})`
-      }}>
-    </div>
+      <div 
+        className="movie-background"
+        style={{
+          backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path || movie.poster_path})`
+        }}>
+      </div>
 
     <section className="wrapper">
-        <MoviePoster posterPath={movie.poster_path}/>
-     <div className="movie">
-      <MovieInfo 
-        movie={movie}
-        isFavorite={isFavorite}
-        toggleFavorite={toggleFavorite}
-        videoKey={videoKey}
-        toggleModal={toggleModal}/>
+      <MoviePoster posterPath={movie.poster_path}/>
+      <div className="movie">
+        <MovieInfo 
+          movie={movie}
+          isFavorite={isFavorite}
+          toggleFavorite={toggleFavorite}
+          videoKey={videoKey}
+          toggleModal={toggleModal}
+        />
         <ActorsList actors={actors}/>
       </div>
     </section>
 
-     {/* Modal para mostrar el tráiler */}
       {isModalOpen && <TrailerModal videoKey={videoKey} toggleModal={toggleModal}/>}
     </article>
   );

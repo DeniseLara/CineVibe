@@ -8,14 +8,16 @@ function SearchBar({ onSearch }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (query.trim() !== '' && onSearch) {  // Verificamos si onSearch existe
+        if (query.trim() !== '' && onSearch) {  
             onSearch(query);
         }
     };
 
     return (
         <form className="search-form" onSubmit={handleSubmit}>
-            <label htmlFor="search" className="visually-hidden">Search movie</label>
+            <label htmlFor="search" className="visually-hidden">
+                Search movie
+            </label>
             <input 
                 type="text" 
                 id='search'
@@ -27,9 +29,10 @@ function SearchBar({ onSearch }) {
                 className="search-input"
             />
             <button 
-            type="submit" 
-            className="search-button" 
-            aria-label='search'>
+                type="submit" 
+                className="search-button" 
+                aria-label='search'
+            >
                 <div className='search-icon'>
                     <IoSearch />
                 </div>

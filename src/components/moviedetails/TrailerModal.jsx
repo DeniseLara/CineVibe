@@ -5,7 +5,11 @@ function TrailerModal({ videoKey, toggleModal }) {
   return (
     <div className="modal-overlay active">
       <div className="modal-content">
-        <button className="close-modal" onClick={toggleModal} aria-label='Close'>
+        <button 
+          className="close-modal" 
+          onClick={toggleModal} 
+          aria-label='Close'
+        >
           <div className="modal-icon"><IoCloseOutline /></div>
         </button>
         <div className="modal-video-container">
