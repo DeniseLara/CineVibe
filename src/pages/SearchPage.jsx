@@ -1,6 +1,5 @@
 import './SearchPage.css';
 import { useState, useRef } from 'react';
-
 import { searchMovies } from '../services/api'; 
 
 import SearchBar from '../components/search/SearchBar';

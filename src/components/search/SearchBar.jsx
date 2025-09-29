@@ -1,10 +1,10 @@
 import './SearchBar.css';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { IoSearch } from "react-icons/io5";
-
 
 function SearchBar({ onSearch }) {  
     const [query, setQuery] = useState('');
+    const inputRef = useRef(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -12,6 +12,10 @@ function SearchBar({ onSearch }) {
             onSearch(query);
         }
     };
+
+    useEffect(() => {
+        inputRef.current?.focus();
+    }, [])
 
     return (
         <form className="search-form" onSubmit={handleSubmit}>
@@ -21,6 +25,7 @@ function SearchBar({ onSearch }) {
             <input 
                 type="text" 
                 id='search'
+                ref={inputRef}
                 name='search-movie'
                 placeholder="Search for a movie..." 
                 value={query} 

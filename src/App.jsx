@@ -1,7 +1,6 @@
 import './App.css'
 import { Routes, Route, useLocation } from 'react-router-dom';
-
-import { useDarkMode } from './hooks/useDarkMode';
+import { useTheme } from './context/ThemeContext';
 
 import HomePage from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
@@ -13,8 +12,7 @@ import Header from './components/header/Header';
 
 function App() {
   const location = useLocation(); // Detectar la ruta actual
-  const { darkMode, toggleDarkMode } = useDarkMode();
-
+  const { toggleDarkMode, darkMode } = useTheme()
   const isMoviePage = location.pathname.startsWith('/movie/');
 
   return (
