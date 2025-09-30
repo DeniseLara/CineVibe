@@ -1,53 +1,16 @@
 import './SearchPage.css';
-import { useState, useRef } from 'react';
-import { searchMovies } from '../services/api'; 
+import { useRef } from 'react';
+import { useMovieSearch } from '../hooks/useMovieSearch';
 
 import SearchBar from '../components/search/SearchBar';
 import MovieCard from '../components/movies/MovieCard';
 
 
 function SearchPage() {
-    const [searchResults, setSearchResults] = useState([]);
-    const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'error' | 'success'
-    const [errorMessage, setErrorMessage] = useState('');
-    const abortControllerRef = useRef(null);
-    
+    const { searchResults, status, errorMessage, handleSearch } = useMovieSearch()
     // Ref para el contenedor de mensajes de resultados para manejar foco
     const resultsRef = useRef(null);
     const errorRef = useRef(null);
-
-    const handleSearch = async (query) => {
-        // Validar que no sea vacío o solo espacios
-        if (!query.trim()) {
-          setSearchResults([]);
-          setErrorMessage('');
-          setStatus('idle');
-          return;
-        }
-
-        // Cancelar petición previa si existe
-        if (abortControllerRef.current) {
-          abortControllerRef.current.abort();
-        }
-        abortControllerRef.current = new AbortController();
-
-        setStatus('loading');
-        setErrorMessage('');
-
-        try {
-            const results = await searchMovies(query, { signal: abortControllerRef.current.signal });
-            setSearchResults(results);
-            setStatus('success');
-            } catch (error) {
-            if (error.name === 'AbortError') {
-            return;
-         }
-            setErrorMessage('Something went wrong. Please try again later.');
-            setStatus('error');
-            // Mover foco al mensaje de error
-            setTimeout(() => errorRef.current?.focus(), 0);
-        }
-    };
 
     return (
         <div className="search-page">

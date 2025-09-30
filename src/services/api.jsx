@@ -1,7 +1,7 @@
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 const BASE_URL = import.meta.env.VITE_API_URL;
 
-// Función para validar y devolver JSON
+// Función genérica y reutilizable para validar y devolver JSON
 const fetchJson = async (url) => {
   const response = await fetch(url);
   if (!response.ok) {
@@ -49,7 +49,11 @@ export const getMovieVideos = async (movieId) => {
   const trailer = youtubeVideos.find(video => video.type === "Trailer");
   const teaser = youtubeVideos.find(video => video.type === "Teaser");
 
-  const videoList = trailer ? [trailer, ...youtubeVideos] : teaser ? [teaser, ...youtubeVideos] : youtubeVideos;
+  const videoList = trailer 
+  ? [trailer, ...youtubeVideos] 
+  : teaser 
+  ? [teaser, ...youtubeVideos] 
+  : youtubeVideos;
 
   // Probar cada video hasta encontrar uno válido
   for (let video of videoList) {

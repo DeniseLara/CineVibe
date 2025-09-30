@@ -18,14 +18,14 @@ function Movie() {
   const { isFavorite, toggleFavorite } = useFavorites();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-// Función para abrir/cerrar el modal del tráiler
-const toggleModal = () => {
-  setIsModalOpen(!isModalOpen);
-};
+  // Función para abrir/cerrar el modal del tráiler
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
 
-if (!movie) {
+  if (!movie) {
     return <div>Loading...</div>;
-}
+  }
 
 
   return (

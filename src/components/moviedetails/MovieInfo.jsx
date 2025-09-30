@@ -7,7 +7,7 @@ import StarRating from './StarRating'
 function MovieInfo({ movie, isFavorite, toggleFavorite, videoKey, toggleModal }) {
 
   return (
-    <div className="movie-text">
+    <section className="movie-text">
       <h2 className="movie-title">{movie.title}</h2>
 
       <div className="movie-principal">
@@ -38,11 +38,11 @@ function MovieInfo({ movie, isFavorite, toggleFavorite, videoKey, toggleModal })
           onClick={toggleModal} 
           aria-label="watch trailer"
         >
-          <div className="movie-icon"><FaPlay /></div>
+          <span className="movie-icon"><FaPlay /></span>
           Watch Trailer
         </button>
       )}
-    </div>
+    </section>
   );
 }
 

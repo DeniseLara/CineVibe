@@ -1,47 +1,9 @@
 import './HomePage.css';
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
-import {
-  fetchTrendingMovies,
-  fetchPopularMovies,
-  fetchComedyMovies,
-  fetchRomanceMovies,
-  fetchSeries,
-} from '../services/api';
-
+import { useHomeMovies } from '../hooks/useHomeMovies';
 
 function HomePage() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [moviesByCategory, setMoviesByCategory] = useState({
-    trending: [],
-    popular: [],
-    comedy: [],
-    romance: [],
-    series: [],
-  });
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const [trending, popular, comedy, romance, series] = await Promise.all([
-        fetchTrendingMovies(),
-        fetchPopularMovies(),
-        fetchComedyMovies(),
-        fetchRomanceMovies(),
-        fetchSeries(),
-      ]);
-      setMoviesByCategory({ trending, popular, comedy, romance, series });
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      } finally {
-        setIsLoading(false)
-      }
-    };
-
-    fetchData();
-  }, []);
-
+  const { isLoading, moviesByCategory, error } = useHomeMovies();
   const categories = [
     { title: 'Trending', id: 'trending' },
     { title: 'Popular', id: 'popular' },
@@ -56,10 +18,10 @@ function HomePage() {
         Discover, save, and enjoy your favorite movies
       </h1>
 
-      {isLoading ? (
-        <p className="loading">Loading...</p>  
-      ) : (
-      categories.map((category) => (
+      {isLoading && <p className="loading">Loading...</p>}
+      {error && <p className="error-message">{error}</p>}
+
+      {!isLoading && !error && categories.map((category) => (
         <section 
           key={category.id} 
           className="category" 
@@ -82,8 +44,7 @@ function HomePage() {
             ))}
           </ul>
         </section>
-      ))
-      )}
+      ))}
     </div>
   );
 }

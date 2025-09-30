@@ -98,7 +98,6 @@
   color: var(--color-white);
 }
 
-/*mobile*/
 .Movie{
   padding-left: 0;
  padding-right: 0;
@@ -119,7 +118,6 @@
   align-items: center;
 }
 
-/* Estilo del toggle switch */
 .mode-toggle {
   font-size: 1rem;
   display: flex;
@@ -161,7 +159,7 @@
   border-radius: 50%;
   left: 0.25rem;
   bottom: 0.25rem;
-  background-color: white;
+  background-color: #fff;
   transition: .4s;
 }
 
