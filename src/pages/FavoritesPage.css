@@ -1,13 +1,14 @@
 .favorites-container {
-    padding: 0 3.5% 3rem;
     margin-top: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .favorite-title {
     font-size: var(--fs-2xl);
-    font-weight: 600;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
 }
 
 .favorites-list {
@@ -19,11 +20,12 @@
 }
 
 .favorite-item {
-    background-color: #1e1e1e;
+    background-color: var(--bg-secondary);
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+    transform: translateY(0);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -31,21 +33,55 @@
     cursor: pointer;
 }
 
+.favorite-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 60%,
+        rgba(0, 0, 0, 0.4) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 1rem;
+    pointer-events: none;
+}
+
+.favorite-item:hover::after {
+    opacity: 1;
+}
+
+:root[data-theme="light"] .favorite-item::after {
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 60%,
+        rgba(0, 0, 0, 0.2) 100%
+    );
+}
+
 .favorite-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .favorite-image {
     width: 100%;
     height: 100%;
-    opacity: 0.8;
+    filter: brightness(0.95);
     object-fit: cover;
+    will-change: transform;
     transition: transform 0.3s ease;
 }
 
 .favorite-item:hover .favorite-image {
     transform: scale(1.05); 
+    filter: brightness(1.05);
 }
 
 .favorite-info {
@@ -55,16 +91,19 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
 }
 
 .remove-favorite {
-    background-color: transparent;
-    color: var(--color-white); 
-    border: 2px solid var(--color-white); 
+    background-color: rgba(15, 20, 25, 0.8);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     padding: 0.5rem 1rem;
     border-radius: 1.5rem; 
     font-size: var(--fs-md);
     font-weight: 600;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
@@ -72,16 +111,33 @@
     justify-content: center;
 }
 
+:root[data-theme="light"] .remove-favorite {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
 .remove-favorite:hover {
-    background-color: #f92a2a;
-    color: var(--color-white); 
-    border: 2px solid transparent; 
-    transform: translateY(-3px); 
+    background-color: var(--accent);
+    color: #ffffff;
+    border:2px solid transparent;
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+}
+
+:root[data-theme="light"] .remove-favorite:hover {
+    background-color: var(--accent);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
 }
 
 .remove-favorite:focus {
     outline: none; 
-    box-shadow: 0 0 0 3px rgba(249, 42, 42, 0.5); 
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.3);
+}
+
+:root[data-theme="light"] .remove-favorite:focus {
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.3);
 }
 
 .remove-favorite svg {
@@ -95,6 +151,7 @@
 
 .favorite-message {
     font-size: var(--fs-base);
+    color: var(--text-secondary);
 }
 
 
@@ -105,18 +162,15 @@
     }
 }
 
-
 @media (min-width: 1024px) and (max-height:1000px){
     .favorites-list{
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
     }
 
     .favorites-container{
-        margin-left: 44vh;
-        padding: 0 1% 3rem;
+        margin-left: 45vh;
     }
 }
-
 
 @media (min-width: 1024px) and (min-height:1100px){
     .favorites-list {
@@ -129,13 +183,11 @@
     }
 }
 
-
 @media (min-width:1280px){
     .favorites-container{
-      margin-left: 42vh;
+      margin-left: 44vh;
     }
 }
-
 
 @media (min-width:1920px){
     .favorites-list {
@@ -143,12 +195,7 @@
     }
 
     .favorites-container{
-       margin-left: 40vh;
-       margin-top: 2rem;
-    }
-
-    .favorites-container {
-       padding: 0 1% 3rem;
+       margin-left: 42vh;
        margin-top: 1.5rem;
     }
 }

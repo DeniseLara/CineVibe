@@ -13,7 +13,6 @@ function MovieInfo({ movie, isFavorite, toggleFavorite, videoKey, toggleModal })
       <div className="movie-principal">
         <div className="movie-rating">
           <StarRating rating={movie.vote_average} />
-          <span className="sr-only"> {movie.vote_average}</span>
         </div>
        <button 
           className='movie-save'

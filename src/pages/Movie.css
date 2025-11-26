@@ -7,7 +7,6 @@
     padding: 2rem 1rem;
 }
 
-/* Fondo desenfocado */
 .movie-background {
     position: absolute;
     top: 0;
@@ -16,23 +15,40 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    filter: blur(10px);  
+    filter: blur(15px) brightness(0.7);
     z-index: -1; 
 }
 
-.movie-background::before {
+.movie-background::after {
     content: "";
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); 
+    background: linear-gradient(
+        135deg,
+        rgba(15, 20, 25, 0.85) 0%,
+        rgba(15, 20, 25, 0.7) 50%,
+        rgba(15, 20, 25, 0.9) 100%
+    );
+    z-index: 0;
+}
+
+:root[data-theme="light"] .movie-background::after {
+    background: linear-gradient(
+        135deg,
+        rgba(249, 250, 251, 0.95) 0%,
+        rgba(249, 250, 251, 0.85) 50%,
+        rgba(249, 250, 251, 0.98) 100%
+    );
 }
 
 .back-arrow-link {
     display: inline-flex;
     align-items: center;
     font-size: var(--fs-xl);
-    color: var(--color-white);
+    color: var(--text-primary);
     text-decoration: none;
     margin-bottom: 1rem;
 }
@@ -44,26 +60,28 @@
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    transition: all 0.3s;
+    background: var(--bg-secondary);
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .back-arrow:hover {
-    color: var(--color-white);
-    transform: translateX(0.5rem);
-    background: rgba(255, 255, 255, 0.4);
+    background: var(--accent);
+    color: #ffffff;
+    transform: translateX(-0.3rem);
 }
 
-/* Contenedor principal */
 .wrapper {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    z-index: 1;
     position: relative;
     padding-bottom: calc(2rem + 3rem); 
 }
 
-/* Sección de imagen */
 .movie-player {
     width: clamp(12.5rem, 25vw, 22rem); 
     aspect-ratio: 2 / 3;
@@ -86,6 +104,11 @@
     transition: all 0.3s ease;
 }
 
+.movie-save:hover {
+    color: var(--bg-secondary);
+    background-color: transparent;
+}
+
 .movie-save:focus,
 .movie-save:active{
     border: none;
@@ -94,29 +117,34 @@
 }
 
 .save-icon {
-    color: var(--color-white);
+    color: var(--text-secondary);
     font-size: inherit;
     transition: color 0.4s ease, transform .4s ease;
+}
+
+.movie-save:hover .save-icon {
+    color: var(--text-primary);
 }
 
 .movie-save:active .save-icon {
     transform: scale(1.15);
 }
 
-/* Cambia de color si la película está guardada */
 .save-icon.saved {
-    color: #ffc107; 
+    color: var(--accent-secondary); 
+}
+
+.save-icon.saved:hover {
+    color: var(--accent-secondary);
 }
 
 .movie-poster-details {
     width: 100%;
-    opacity: 0.75;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     border-radius: 0.5rem;
     object-fit: cover;
 }
 
-/* Información de la película */
 .movie {
     display: flex;
     flex-direction: column;
@@ -127,26 +155,33 @@
 .movie-text {
     font-size: var(--fs-base);
     position: relative;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme="light"] .movie-text {
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.3);
 }
 
 .movie-title {
     font-size: var(--fs-xl);
-    font-weight: 500;
-    color: var(--color-white);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
 }
 
 .movie-rating {
     font-size: var(--fs-sm);
-    color: #ffcc00;
+    color: var(--accent-secondary);
     align-items: center;
     display: flex;
     gap: 0.8rem;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .sr-only{
     font-size: var(--fs-md);
-    color: var(--gray-light);
+    color: var(--text-secondary);
 }
 
 .star-rating{
@@ -157,27 +192,35 @@
 
 .movie-overview {
     font-size: var(--fs-base);
-    color: var(--gray-light);
+    color: var(--text-secondary);
     text-align: start;
     line-height: 1.6;
     margin: 1rem 0;
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+:root[data-theme="light"] .movie-overview {
+    color: var(--text-primary);
+    opacity: 0.9;
 }
 
 .movie-button {
     display: inline-flex;
-    background: linear-gradient(135deg, #ff3d00, #ff7300);
-    color: var(--color-white);
+    background: var(--accent);
+    color: #ffffff;
+    border: 2px solid transparent;
     font-size: var(--fs-sm);
-    font-weight: bold;
-    padding: 0.8rem 1.2rem;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
     border-radius: 0.8rem;
     text-transform: uppercase;
     transition: all 0.3s ease;
     cursor: pointer;
     gap: 0.5rem;
     text-decoration: none;
-    box-shadow: 0px 4px 10px rgba(255, 61, 0, 0.3);
-    letter-spacing: 1px;
+    box-shadow: 0px 4px 10px rgba(229, 9, 20, 0.3);
+    letter-spacing: 0.5px;
 }
 
 .movie-icon{
@@ -192,9 +235,10 @@
 }
 
 .movie-button:hover {
-    background: linear-gradient(135deg, #ff7300, #ff3d00);
-    box-shadow: 0px 6px 15px rgba(255, 61, 0, 0.5);
+    background: var(--accent-hover);
+    box-shadow: 0px 6px 15px rgba(229, 9, 20, 0.5);
     transform: translateY(-2px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .movie-button:active {
@@ -203,10 +247,10 @@
 
 .movie-actors {
     font-size: var(--fs-lg);
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
     margin-top: 1.5rem;
-    color: var(--color-white);
+    color: var(--text-primary);
 }
 
 .movie-actors-list {
@@ -215,27 +259,31 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    color: var(--color-white);
+    color: var(--text-primary);
 }
 
 .movie-actors-list .movie-actor {
     font-size: var(--fs-base);
-    background: rgba(255, 255, 255, 0.1);
-    border: 1.2px solid rgba(255, 255, 255, 0.1);
+    background: var(--bg-secondary);
+    border: 1.2px solid var(--border-color);
     padding: 0.5rem 1rem;
     border-radius: 2rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    backdrop-filter: blur(10px);
     transition: all .3s ease;
 }
 
 .movie-actor:hover{
-    opacity: 0.8;
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
 }
 
 .modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
+    background: rgba(15, 20, 25, 0.95);    display: flex;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(10px);
@@ -246,20 +294,19 @@
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Cuando el modal está activo */
 .modal-overlay.active {
     opacity: 1;
     visibility: visible;
 }
 
-/* Contenedor del modal */
 .modal-content {
     width: 90%;
     max-width: 50rem;
-    background: #1c1c1e;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
     border-radius: 1rem;
     padding: 2.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     font-size: var(--fs-base);
@@ -269,7 +316,6 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Cuando el modal está activo */
 .modal-overlay.active .modal-content {
     transform: scale(1);
     opacity: 1;
@@ -284,7 +330,7 @@
     padding: 0;
     outline: none;
     font-size: var(--fs-xl);
-    color: var(--color-white);
+    color: var(--text-secondary);
     cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -294,17 +340,16 @@
 }
 
 .close-modal:hover {
-    color: #ff3d00;
-    transform: rotate(90deg);
+    color: var(--accent);
+    background-color: transparent;
 }
 
-/* Contenedor del video */
 .modal-video-container {
     width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: 0.8rem;
     overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(241, 234, 232, 0.3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .modal-icon {
@@ -325,7 +370,6 @@
         padding: 2rem 2.5rem;
     }
 }
-
 
 @media (min-width: 1024px) and (max-height:1100px){
     .movie-principal{
@@ -404,13 +448,11 @@
     }
 }
 
-
 @media (min-width:1280px){
     .movie-details {
         padding: 4.5rem 2rem;
     }
 }
-
 
 @media (min-width:1920px){
     .movie-details{

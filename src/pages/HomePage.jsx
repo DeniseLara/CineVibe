@@ -13,9 +13,9 @@ function HomePage() {
   ];
 
   return (
-    <div className="home-container">
+    <div className="home-container container">
       <h1 className="home-title">
-        Discover, save, and enjoy your favorite movies
+        Find Your Next Movie
       </h1>
 
       {isLoading && <p className="loading">Loading...</p>}
@@ -37,9 +37,9 @@ function HomePage() {
                   alt={movie.title || movie.name}
                   className="movie-poster"
                 />
-                <Link to={`/movie/${movie.id}`} className="play-button">
+                <button className="play-button"><Link to={`/movie/${movie.id}`}>
                   View Details
-                </Link>
+                </Link></button>
               </li>
             ))}
           </ul>

@@ -3,6 +3,7 @@
     transition: all .3s ease-in-out;
     position: relative;
     margin: 0 auto;
+    max-width: 800px;
 }
 
 .visually-hidden {
@@ -18,35 +19,39 @@
 }
   
 .search-input {
-    background: transparent;
-    border: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 2rem;
     outline: none;
     transition: all .3s ease-in-out;
     font-size: var(--fs-base);
-    color: var(--color-white);
+    color: var(--text-primary);
     width: 100%;
-    max-width: 100%;
     padding: 0.7rem 2.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-family: var(--font-body);
 }
   
 .search-input::placeholder {
     font-size: var(--fs-sm);
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--text-muted);
 }
 
 .search-input:focus {
-    border: 1px solid #c56c1c;
-    box-shadow: 0 0 4px rgba(197, 108, 28, 0.5);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.1);
+    background: var(--bg-primary);
+}
+
+:root[data-theme="light"] .search-input:focus {
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
 }
 
 .search-button {
     border: none;
     outline: none;
     background-color: transparent;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-muted);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
@@ -59,7 +64,6 @@
     padding: 0.7rem 0.8rem;
     background-color: transparent;
     position: absolute;
-    color: rgba(255, 255, 255, 0.8);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     font-size: var(--fs-md);

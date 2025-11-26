@@ -13,7 +13,7 @@ function SearchPage() {
     const errorRef = useRef(null);
 
     return (
-        <div className="search-page">
+        <div className="search-page containerPage">
             <SearchBar onSearch={handleSearch} />
             {errorMessage && (
                 <p

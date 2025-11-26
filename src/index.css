@@ -1,20 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  font-family: "Roboto", sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
-  --color-white: #ffffff;
-  --gray-light: #CCCCCC;
-  --gray-medium: #999999;
+  --font-heading: "Montserrat", sans-serif;
+  --font-body:"Roboto", sans-serif;
 
   --fx-xs: clamp(0.64rem, 0.608rem + 0.16vw, 0.8rem);
   --fs-sm: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
@@ -24,6 +13,65 @@
   --fs-xl: clamp(1.9531rem, 1.8555rem + 0.4883vw, 2.4414rem);
   --fs-2xl: clamp(2.4414rem, 2.3193rem + 0.6104vw, 3.0518rem);
   --fs-3xl: clamp(3.0518rem, 2.8992rem + 0.7629vw, 3.8147rem);
+}
+
+:root[data-theme="dark"] {
+  --bg-primary: #0F1419;
+  --bg-secondary: #1C2127;
+
+  --text-primary: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+
+  --accent: #E50914;
+  --accent-hover: #B91C1C;
+  --accent-secondary: #F59E0B;
+  
+  --navbar-bg: #0F1419;
+  --navbar-link: #808080;
+  --navbar-link-active: #F3F4F6;
+  --navbar-link-hover: #F3F4F6;
+  --navbar-logo: #FFC107;
+  
+  --border-color: #374151;
+  --divider: rgba(255, 255, 255, 0.08);
+  
+  --color-white: #ffffff;
+}
+
+:root[data-theme="light"] {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F9FAFB;
+
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --text-muted: #9CA3AF;
+  
+  --accent: #DC2626;
+  --accent-hover: #991B1B;
+  --accent-secondary: #D97706;
+
+  --navbar-bg: #FFFFFF;
+  --navbar-link: #6B7280;
+  --navbar-link-active: #111827;
+  --navbar-link-hover: #111827;
+  --navbar-logo: #DC2626;
+  
+  --border-color: #E5E7EB;
+  --divider: rgba(0, 0, 0, 0.08);
+  
+}
+
+body {
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  line-height: 1.6;
+  font-family: var(--font-body);
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
 }
 
 * {
@@ -39,20 +87,12 @@ html{
 a {
   font-weight: 500;
   text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
+  color: var(--text-primary);
+  transition: background-color .25s ease, color .25s ease;
 }
 
 ul{
   list-style: none;
-}
-
-h1 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1.1;
 }
 
 button {
@@ -60,19 +100,50 @@ button {
   border: none;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
   outline: none;
-  font-family: inherit;
+  font-family: var(--font-heading);
   -webkit-tap-highlight-color: transparent; /* quita el flash azul en móviles */
-  background-color: #1a1a1a;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color .25s ease, color .25s ease;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
 }
 
 button:focus,
 button:focus-visible{
   outline: none;
   border: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1400px;
+  margin-inline: 1.5rem;
+}
+
+
+
+@media screen and (max-width:320px) {
+  .container {
+    margin-inline: 1rem;
+  }
+}
+
+@media screen and (min-width:1150px) {
+  .container {
+    margin-inline: auto;
+    max-width: 100%;
+  }
 }
 
 

@@ -6,7 +6,7 @@ import { TbBrandVite, TbRoute } from "react-icons/tb";
 
 function AboutPage() {
   return (
-    <div className="about-container">
+    <div className="about-container container">
       <h1 className="about-title">About This Project</h1>
 
       <section className="about-section">

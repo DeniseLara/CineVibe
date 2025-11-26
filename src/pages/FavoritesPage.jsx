@@ -6,13 +6,13 @@ function FavoritePage() {
     const { favorites, toggleFavorite } = useFavorites();
 
     return (
-        <section className="favorites-container" aria-label="Favorite movies list">
+        <section className="favorites-container container" aria-label="Favorite movies list">
             <h1 className='favorite-title'>My list</h1>
 
             {favorites.length > 0 ? (
                 <ul className="favorites-list">
                     {favorites.map((movie) => (
-                        <li key={movie.id} className="favorite-item">
+                        <li key={`${movie.id}-${movie.poster_path}`} className="favorite-item">
                             <img
                                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                                 alt={`Poster of ${movie.title}`}

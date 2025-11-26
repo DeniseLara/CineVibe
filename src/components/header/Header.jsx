@@ -1,5 +1,6 @@
 import { FaSun, FaMoon } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import './Header.css'
 
 function Header({ darkMode, toggleDarkMode }) {
   return (

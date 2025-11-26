@@ -25,11 +25,17 @@ export function useFavorites() {
   // Función para alternar favorito
   const toggleFavorite = (movie) => {
     setFavorites(prev => {
-      if (prev.some(fav => fav.id === movie.id)) {
-        return prev.filter(fav => fav.id !== movie.id);
-      } else {
-        return [...prev, { id: movie.id, title: movie.title, poster_path: movie.poster_path }];
-      }
+    const exists = prev.some(fav => fav.id === movie.id);
+
+    if (exists) {
+      return prev.filter(fav => fav.id !== movie.id);
+    }
+
+    // Evita duplicados accidentalmente
+    return [
+      ...prev.filter(fav => fav.id !== movie.id),
+      { id: movie.id, title: movie.title, poster_path: movie.poster_path }
+    ];
     });
   };
 
