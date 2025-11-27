@@ -1,9 +1,9 @@
-🎬 CineVibe
+# CineVibe
 
 CineVibe es una aplicación web para explorar películas, ver sus trailers, leer sinopsis, rating y conocer a los actores principales. Está diseñada con enfoque en la experiencia de usuario, el diseño responsive y el modo oscuro.
 
 
-# 🔍 Características
+## Características
 
 - Buscar películas por nombre.
 - Ver trailers directamente en la app.
@@ -15,7 +15,7 @@ CineVibe es una aplicación web para explorar películas, ver sus trailers, leer
 - Diseño responsive para dispositivos móviles y escritorio.
 
 
-# 🛠️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - React (con Vite y npm)
 - React Router dom para navegación
@@ -25,13 +25,13 @@ CineVibe es una aplicación web para explorar películas, ver sus trailers, leer
 - LocalStorage para modo oscuro y favoritos
 
 
-# 🌐 Deploy
+## Deploy
 
 Este proyecto está desplegado en:
 🔗 https://cinevibe-o7ln.onrender.com
 
 
-# 🗒️ Notas
+## Notas
 
 - La aplicación utiliza la API de TMDb; por lo tanto, los trailers pueden variar en calidad o disponibilidad.
 - Este proyecto es de demostración y no almacena usuarios ni sesiones.
