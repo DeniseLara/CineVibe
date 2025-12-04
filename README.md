@@ -1,38 +1,52 @@
-# CineVibe
+# 🎬 CineVibe
 
-CineVibe es una aplicación web para explorar películas, ver sus trailers, leer sinopsis, rating y conocer a los actores principales. Está diseñada con enfoque en la experiencia de usuario, el diseño responsive y el modo oscuro.
+**CineVibe** es una aplicación web para explorar películas, ver sus trailers, leer sinopsis, revisar calificaciones y conocer a los actores principales.  
+Está diseñada con un fuerte enfoque en **experiencia de usuario**, **diseño responsive** y **modo oscuro/claro**.
 
+---
 
-## Características
+## 🚀 Características Principales
 
-- Buscar películas por nombre.
-- Ver trailers directamente en la app.
-- Leer sinopsis detallada.
-- Ver calificación (rating) de cada película.
-- Ver lista de actores principales.
-- Añadir películas a favoritos.
-- Alternar entre modo claro y oscuro.
-- Diseño responsive para dispositivos móviles y escritorio.
+- **Buscar películas** por nombre  
+- **Ver trailers** directamente en la app  
+- **Leer sinopsis** detallada  
+- **Ver calificación (rating)** de cada película  
+- **Revisar actores principales**  
+- **Agregar películas a favoritos**  
+- **Alternar entre modo claro y oscuro**  
+- **Diseño responsive** para móviles, tablets y escritorio  
 
+---
 
-## Tecnologías utilizadas
+## 🛠️ Tecnologías Utilizadas
 
-- React (con Vite y npm)
-- React Router dom para navegación
-- CSS personalizado (modo oscuro/claro)
-- TMDb API para obtener datos de películas
-- React Icons para íconos
-- LocalStorage para modo oscuro y favoritos
+### Frontend
+- **React** (con Vite + npm)
+- **React Router DOM** para navegación
+- **React Icons** para iconografía
+- **CSS personalizado** con soporte para modo claro/oscuro
 
+### API & Data
+- **TMDb API** para obtener información de películas, trailers y elenco
 
-## Deploy
+### Persistencia
+- **LocalStorage** para almacenar modo oscuro y favoritos
 
-Este proyecto está desplegado en:
-🔗 https://cinevibe-o7ln.onrender.com
+---
 
+## 🌐 Deploy
 
-## Notas
+La aplicación está desplegada en Render y disponible en:
 
-- La aplicación utiliza la API de TMDb; por lo tanto, los trailers pueden variar en calidad o disponibilidad.
-- Este proyecto es de demostración y no almacena usuarios ni sesiones.
-- Los favoritos se guardan localmente en el navegador usando LocalStorage.
+👉 **https://cinevibe-o7ln.onrender.com**
+
+---
+
+## 📌 Notas Importantes
+
+- La app utiliza la **API de TMDb**, por lo que la disponibilidad y calidad de los trailers puede variar.  
+- Es un **proyecto de demostración**, no maneja usuarios ni autenticación.  
+- Los **favoritos se almacenan localmente** en el navegador mediante LocalStorage.  
+
+---
+
